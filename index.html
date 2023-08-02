@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="imgs/prof_p_r.png">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <div class="nav-hide"></div>
+                <a href="./index.html" class="nav-title">Hi, I'm Prashant <span class="wave">👋</span></a>
+                <div class="dark">
+                    <div class="clock">
+                        <div class="display-date">
+                          <span id="day">day</span>,
+                          <span id="daynum">00</span>
+                          <span id="month">month</span>
+                          <span id="year">0000</span>
+                          <span class="display-time"></span> -
+                        </div>
+                    </div>
+                <label class="theme-switch-second" for="checkboxsecond" id="themeswitch-second">
+                    <input type="checkbox" id="checkboxsecond">
+                    <div class="slider-second round-second"></div>
+                </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="m1">
+        <div class="main-wrapper">
+            <article class="wide reveal00">
+                <div class="card">
+                    <h1 class="title1">
+                        Projects
+                    </h1>
+                </div>
+                <div class="data2">
+                    07
+                </div>
+                <button class="Btn1" onclick="goToP()">
+                    Take a Look
+                </button>
+            </article>
+            <article class="square1 reveal01">
+                <div class="card">
+                    <h1 class="title">
+                        ME
+                    </h1>
+                    <div class="data3" onmouseenter="moveChild()" onmouseleave="resetChild()">
+                        <span class="a1">></span>
+                        <span class="a2">></span>
+                        <span class="a3">></span>
+                    </div>
+                </div>
+                <button class="Btn3" onclick="goToM()">
+                    Take a Look
+                </button>
+            </article>
+            <article class="square2 reveal02">
+                <div class="card">
+                    <h1 class="title justify-space-between">
+                        <span>Uiverse</span>
+                        <svg class="uisvg" xmlns="http://www.w3.org/2000/svg" width="60" height="38" viewBox="0 0 97 94">
+                            <path d="M38.0481 4.82927C38.0481 2.16214 40.018 0 42.4481 0H51.2391C53.6692 0 55.6391 2.16214 55.6391 4.82927V40.1401C55.6391 48.8912 53.2343 55.6657 48.4248 60.4636C43.6153 65.2277 36.7304 67.6098 27.7701 67.6098C18.8099 67.6098 11.925 65.2953 7.11548 60.6663C2.37183 56.0036 3.8147e-06 49.2967 3.8147e-06 40.5456V4.82927C3.8147e-06 2.16213 1.96995 0 4.4 0H13.2405C15.6705 0 17.6405 2.16214 17.6405 4.82927V39.1265C17.6405 43.7892 18.4805 47.2018 20.1605 49.3642C21.8735 51.5267 24.4759 52.6079 27.9678 52.6079C31.4596 52.6079 34.0127 51.5436 35.6268 49.4149C37.241 47.2863 38.0481 43.8399 38.0481 39.0758V4.82927Z"/>
+                            <path d="M86.9 61.8682C86.9 64.5353 84.9301 66.6975 82.5 66.6975H73.6595C71.2295 66.6975 69.2595 64.5353 69.2595 61.8682V4.82927C69.2595 2.16214 71.2295 0 73.6595 0H82.5C84.9301 0 86.9 2.16214 86.9 4.82927V61.8682Z"/>
+                            <path d="M2.86102e-06 83.2195C2.86102e-06 80.5524 1.96995 78.3902 4.4 78.3902H83.6C86.0301 78.3902 88 80.5524 88 83.2195V89.1707C88 91.8379 86.0301 94 83.6 94H4.4C1.96995 94 0 91.8379 0 89.1707L2.86102e-06 83.2195Z"/>
+                            <defs xmlns="http://www.w3.org/2000/svg">
+                            <linearGradient id="paint0_linear_501_142" x1="0" y1="0" x2="96.1684" y2="87.6201" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#BF66FF"/>
+                            <stop offset="0.510417" stop-color="#6248FF"/>
+                            <stop offset="1" stop-color="#00DDEB"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_501_142" x1="0" y1="0" x2="96.1684" y2="87.6201" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#BF66FF"/>
+                            <stop offset="0.510417" stop-color="#6248FF"/>
+                            <stop offset="1" stop-color="#00DDEB"/>
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_501_142" x1="0" y1="0" x2="96.1684" y2="87.6201" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#BF66FF"/>
+                            <stop offset="0.510417" stop-color="#6248FF"/>
+                            <stop offset="1" stop-color="#00DDEB"/>
+                            </linearGradient>
+                            </defs>
+                            </svg>
+                    </h1>
+                    <p class="data1">
+                        <button class="g1" style="pointer-events: none;">Posts : 42</button>
+                        <button class="g1" style="pointer-events: none;">Views : 130K+</button>
+                        <button class="g1" style="pointer-events: none;">Favorites : 5000+</button><br>
+
+                        <button class="g1" onclick="window.open('https://uiverse.io/creators', '_blank')">Top #7 @ Uiverse.io</button>
+                        <button class="g1" style="pointer-events: none;">Once a Winner Always A Runner-Up</button>
+
+                        <button class="g3" onclick="window.open('https://uiverse.io/challenges/tailwind-button', '_blank')">👑</button>
+                        <button class="g3" onclick="window.open('https://uiverse.io/challenges/open-source-card-challenge', '_blank')">🏃</button>
+                        <button class="g3" onclick="window.open('https://uiverse.io/challenges/css-challenge-1', '_blank')">🏃</button>
+                        <button class="g3" onclick="window.open('https://uiverse.io/challenges/level-up-challenge', '_blank')">:)</button>
+                    </p>
+                </div>
+                <button class="Btn" onclick="window.open('https://uiverse.io/profile/Praashoo7', '_blank')">
+                    Take a Look
+                </button>
+            </article>
+            <article class="square21 reveal03">
+                <div class="card">
+                    <h1 class="title justify-space-between">
+                        <span>Github</span>
+                        <svg class="github" height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="60" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default">
+                            <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+                        </svg>
+                    </h1>
+                    <p class="data1">
+                       <button class="g1"  onclick="window.open('https://github.com/Praashoo7?tab=repositories', '_blank')">Repositories :</button><br>
+                       <button class="g1"  onclick="window.open('https://github.com/Praashoo7/MiniProjects', '_blank')">MiniProjects</button>
+                        <button class="g1"  onclick="window.open('https://github.com/Praashoo7/Interview-Management-System', '_blank')">IMS</button>
+                        <button class="g1"  onclick="window.open('https://github.com/Praashoo7/AUTOMATION', '_blank')">AUTOMATION</button>
+                        <button class="g1"  onclick="window.open('https://github.com/Praashoo7/Web', '_blank')">Web</button>
+                        <button class="g1"  onclick="window.open('https://github.com/Praashoo7/Portfolio', '_blank')">Portfolio</button>
+                    </p>
+                </div>
+                <button class="Btn"  onclick="window.open('https://github.com/Praashoo7', '_blank')">
+                    Take a Look
+                </button>
+            </article>
+            <article class="square11 reveal04">
+                <div class="card">
+                        <h1 class="title">Get in Touch!</h1>
+                        <p class="data1">
+                            <button class="g2" style="gap: 0.5em;" onclick="mailDefault()">E-Mail : praashme@gmail.com</button><br>
+                            <button class="g2" style="gap: 0.5em;" onclick="window.open('https://discord.com/users/776116560834068512', '_blank')">Discord<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                              </svg></button>
+                             <button class="g2" style="gap: 0.5em;" onclick="window.open('https://twitter.com/praashhaant', '_blank')">Twitter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                              </svg></button>
+                             <button class="g2" style="gap: 0.5em;" onclick="window.open('https://www.instagram.com/_prash_777/', '_blank')">Instagram <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                              </svg></button>
+                             <button class="g2" style="gap: 0.5em;" onclick="window.open('https://www.linkedin.com/in/prashant-patil-ba301422b/', '_blank')">LinkedIn <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                              </svg></button>
+                         </p>
+                </div>
+                <button class="Btn3" onclick="goToC()">
+                    Let's Chat
+                </button>
+            </article>
+    </div>
+    </div>
+
+    <div class="m2 reveal" id="projects">
+        <h1 class="title5" style="color: #F1FCC0;">
+            Projects
+        </h1>
+        <div class="main-wrapper1">
+            <article class="wide-cc reveal1">
+                <div class="card">
+                    <h1 class="title2">
+                        1. TypeSpeed
+                    </h1>
+                    <div class="data">
+                        Python
+                    </div>
+                </div>
+                <button class="Btn4" onclick="window.open('https://github.com/Praashoo7/MiniProjects/tree/main/TypeSpeed', '_blank')">
+                    GitHub
+                </button>
+            </article>
+            <article class="wide-cc reveal11">
+                <div class="card">
+                    <div class="data4">
+                        This is used to calculate the typing speed of the user. At the end of the test it shows the total
+time taken and WPM (Words per minute). There is also a Leader Board of Top 5 people
+which is shown after a successful test.
+
+                    </div>
+                </div>
+            </article>
+            <article class="wide-cc reveal1">
+                <div class="card">
+                    <h1 class="title2">
+                        2. Automatic Code Writing
+                    </h1>
+                    <div class="data">
+                        Python
+                    </div>
+                </div>
+                <button class="Btn4" onclick="window.open('https://github.com/Praashoo7/AUTOMATION/tree/main/Python%20Automatic%20Code%20Writing', '_blank')">
+                    GitHub
+                </button>
+            </article>
+            <article class="wide-cc reveal11">
+                <div class="card">
+                    <div class="data4">
+                        This script scans the given Google Drive for Images and Information related to the Images
+and adds a block of code with the link of the specific image with related information to
+the main code of the Website. This is the same Website that is mentioned on No. 5.
+                    </div>
+                </div>
+            </article>
+            <article class="wide-cc reveal1">
+                <div class="card">
+                    <h1 class="title2">
+                        3. Interview Management System
+                    </h1>
+                    <div class="data">
+                        Java, SQL, HTML-CSS, PHP, JavaScript
+                    </div>
+                </div>
+                <button class="Btn4" onclick="window.open('https://github.com/Praashoo7/Interview-Management-System', '_blank')">
+                    GitHub
+                </button>
+            </article>
+            <article class="wide-cc reveal11">
+                <div class="card">
+                    <div class="data4">
+                        Interview Management System provides a comfortable user interface to conduct Tests
+and Store the Candidate Data. Inside the system we can Add & Remove Candidate’s
+Details, Browse their CV’s. We can also Display the Added data. After the tests we can
+perform all similar processes with Candidates Result data.
+There are also HTML/PHP pages to Conduct tests with MCQ type Question Papers.
+There is a timer for Test. At the end of the Exam, The Total No. of Questions, Total No. of
+Correct Answers, the time & Pass/Fail Result is Displayed. There are Different
+Display’s for the Conditions if Time of test is Ended First or The Test Ended First.
+                    </div>
+                </div>
+            </article>
+            <article class="wide-cc reveal1">
+                <div class="card">
+                    <h1 class="title2">
+                        4. A Photography Website
+                    </h1>
+                    <div class="data">
+                        HTML-CSS, JavaScript
+                    </div>
+                </div>
+                <button class="Btn4" onclick="window.open('https://github.com/Praashoo7/Web', '_blank')">
+                    GitHub
+                </button>
+            </article>
+            <article class="wide-cc reveal11">
+                <div class="card">
+                    <div class="data4">
+                        Like to do some Amateur Photography, So thought why don't i display it and get humiliated by a bunch of Strangers.
+                    </div>
+                </div>
+                <button class="Btn4" onclick="window.open('https://praashoo7.github.io/Web/', '_blank')">
+                    Visit Site
+                </button>
+            </article>
+            <article class="wide-cc reveal1">
+                <div class="card">
+                    <h1 class="title2">
+                        5. Date Calculator
+                    </h1>
+                    <div class="data">
+                        Python
+                    </div>
+                </div>
+                <button class="Btn4" onclick="window.open('https://github.com/Praashoo7/MiniProjects/tree/main/DateCalculator(WithoutUsingModule)', '_blank')">
+                    GitHub
+                </button>
+            </article>
+            <article class="wide-cc reveal11">
+                <div class="card">
+                    <div class="data4">
+                        Here we can calculate Days, Months, Weeks &  Years from two manual Dates provided by user or till current Date. The fun part is that this is created without using any Python modules.
+                    </div>
+                </div>
+            </article>
+            <article class="wide-cc reveal1">
+                <div class="card">
+                    <h1 class="title2">
+                        6. THIS WEBSITE
+                    </h1>
+                    <div class="data">
+                        HTML-CSS, JavaScript
+                    </div>
+                </div>
+                <button class="Btn4" onclick="window.open('https://github.com/Praashoo7/Portfolio', '_blank')">
+                    GitHub
+                </button>
+            </article>
+            <article class="wide-cc reveal11">
+                <div class="card">
+                    <div class="data4">
+                        One day, checked out my Old Portfolio. Felt Sick.
+                        Made a New One. Win 👍.<br>
+                        Can't wait to feel sick again.
+                    </div>
+                </div>
+            </article>
+            <article class="wide-cc reveal1">
+                <div class="card">
+                    <h1 class="title2">
+                        7. Automation Scripts Related to Mailing & File Handling
+                    </h1>
+                    <div class="data">
+                        Python
+                    </div>
+                </div>
+                <button class="Btn4" onclick="window.open('https://github.com/Praashoo7/AUTOMATION/tree/main/FileHandling', '_blank')">
+                    GitHub
+                </button>
+            </article>
+            <article class="wide-cc reveal11">
+                <div class="card">
+                    <div class="data4">
+                        In this Project the Python Script is scheduled to run every Midnight and to send “Happy
+Birthday and the Person’s name” as message and Total Years, Months, Weeks and Days
+the particular person has lived till date as text or as written in a file attached to the mail on their birthday.
+The Person’s name and Birthdate information is retrieved from an excel file. Also There are many different Scripts related to File Handling Operations like Adding, Removing, Updating and Retriving Data.
+                    </div>
+                </div>
+            </article>
+            <article class="wide-cc reveal111">
+                <div class="card">
+                    <h1 class="title2">
+                        Java
+                    </h1>
+                    <div class="progress">
+                        <div class="progress-value1"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="wide-cc reveal111">
+                <div class="card">
+                    <h1 class="title2">
+                        Python
+                    </h1>
+                    <div class="progress">
+                        <div class="progress-value2"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="wide-cc reveal111">
+                <div class="card">
+                    <h1 class="title2">
+                        HTML-CSS
+                    </h1>
+                    <div class="progress">
+                        <div class="progress-value3"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="wide-cc reveal111">
+                <div class="card">
+                    <h1 class="title2">
+                        JavaScript
+                    </h1>
+                    <div class="progress">
+                        <div class="progress-value4"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="m3 reveal" id="me">
+        <div class="main-wrapper2">
+            <article class="wide-cc1">
+                <div class="card">
+                    <h1 class="title3">
+                        I'm Prashant,
+                    </h1>
+                    <p class="data5">
+                        <a>A 23 year old Dev located in India📍<br><br>
+                        
+                        
+                            I have a huge Interest in Creating things for best
+                        possible user experience. I Like to be a problem solver while Paying high attention to detail. Fan of Cinema, Writing, Tech, Photography.
+                        <br><br>
+                        
+                        
+                        Interested in Creating Things.
+                        <br><br>
+                        
+                        
+                        Not a Proffesional but a Passionate.</a>
+                        <br><br><br></b>
+                        
+                        
+                        
+                        <a style="font-size: 30px;">Working @ <a id="about-info" style="font-size: 30px; font-style: italic;">nowhere</a><br></a><br>
+                        <a style="font-size: 30px; letter-spacing: 0.4vw;">Main Skills : </a><br>
+                        <a id="about-info">Python, HTML-CSS, Java, JavaScript</a><br><br>
+                        <button class="download">Download CV<a href="Resume/Resume.pdf" download="Prashant-Resume"><svg class="download-svg" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"/></g></svg></a></button>
+                    </p>
+                    <picture class="wide-image-container" id="tilt">
+                        <img class="image-wide" src="imgs/me.jpg" alt="@ME">
+                    </picture>
+                </div>
+            </article>
+    </div>
+    </div>
+
+    <div class="m4 reveal" id="letschat">
+        <h1 class="title4">
+            Send me a message or just a Great Dev Joke!
+        </h1>
+        <div class="main-wrapper3">
+        <article class="wide-c">
+            <div class="card">
+                <div class="card-text">
+                    <h1 class="title">Let's Chat!</h1>
+                        <div class="card-text">
+                          <form action="javascript:sendmail()">
+                            <div class="input-box">
+                                    <input class="input" id="name" name="name" required placeholder="Name" type="text" style="font-weight: bold;">
+                                    <span class="input-border"></span>
+                            </div>
+                            <div class="input-box">
+                                <input class="input" type="email" id="email" name="email" required placeholder="E-Mail" style="font-weight: bold;">
+                                <span class="input-border"></span>
+                              </div>
+                            <div class="input-box">
+                              <input class="input" type="text" id="message" name="message" required placeholder="Message.." style="font-weight: bold; resize: none;"><br>
+                              <span class="input-border"></span>
+                              </div>
+                        </div>
+                </div>
+            </div>
+    </article>
+    <article class="wide-c1">
+            <button type="submit" class="Btn2" id="mailBtn">
+                Send
+            </button>
+        </form>
+    </article>
+    </div>
+    </div>
+
+    <article class="wide-cc2">
+        <img class="fp" style="width: 46px; height: 46px; border-radius: 50%;" src="imgs/prof_p_r.png">
+        <p class="copyright">Copyright © <script>document.write(new Date().getFullYear());</script> PORTFOLIO</p>
+        <p class="design">Designed by <span class="namet">Prashant</span></p>
+    </article>
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('KbbcHcvs0hypfwTvU')
+    </script>
+
+</body>
+</html>
