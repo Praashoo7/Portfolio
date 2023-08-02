@@ -288,7 +288,7 @@ function reveal00() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
+    var elementVisible = 0;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -298,6 +298,7 @@ function reveal00() {
   }
 }
 
+window.addEventListener("scroll", reveal00);
 window.addEventListener("DOMContentLoaded", reveal00);
 
 function reveal01() {
@@ -306,7 +307,7 @@ function reveal01() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
+    var elementVisible = 0;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -315,7 +316,7 @@ function reveal01() {
     }
   }
 }
-
+window.addEventListener("scroll", reveal01);
 window.addEventListener("DOMContentLoaded", reveal01);
 
 function reveal02() {
@@ -324,7 +325,7 @@ function reveal02() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
+    var elementVisible = 0;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -334,6 +335,7 @@ function reveal02() {
   }
 }
 
+window.addEventListener("scroll", reveal02);
 window.addEventListener("DOMContentLoaded", reveal02);
 
 function reveal03() {
@@ -342,7 +344,7 @@ function reveal03() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
+    var elementVisible = 0;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -352,6 +354,7 @@ function reveal03() {
   }
 }
 
+window.addEventListener("scroll", reveal03);
 window.addEventListener("DOMContentLoaded", reveal03);
 
 function reveal04() {
@@ -360,7 +363,7 @@ function reveal04() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
+    var elementVisible = 0;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -370,6 +373,7 @@ function reveal04() {
   }
 }
 
+window.addEventListener("scroll", reveal04);
 window.addEventListener("DOMContentLoaded", reveal04);
 
 
