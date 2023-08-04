@@ -1400,6 +1400,16 @@ transition: 1s ease 0.3s, scale 0.2s ease-in-out, background-color 0.2s ease-in-
 opacity: 1;
 }
 
+.revealC{
+  transform: translateX(50px);
+  transition: 1s ease;
+  filter: blur(4px);
+}
+.revealC.active{
+  transform: translateX(0);
+  filter: blur(0px);
+}
+
 .reveal{
 transform: translateY(100px);
 opacity: 0;
