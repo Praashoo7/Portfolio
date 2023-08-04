@@ -9,15 +9,15 @@
     <script src="index.js" defer></script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RY3GL1ZG6R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RY3GL1ZG6R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-RY3GL1ZG6R');
-</script>
+    gtag('config', 'G-RY3GL1ZG6R');
+    </script>
 
 <body>
 
@@ -379,7 +379,7 @@ The Person’s name and Birthdate information is retrieved from an excel file. A
                         I'm Prashant,
                     </h1>
                     <p class="data5">
-                        <a>A 23 year old Dev from India📍<br><br>
+                        <a id="des1">A 23 year old Dev from India📍<br><br>
                         
                         
                             I have a huge Interest in Creating things for best
@@ -396,8 +396,8 @@ The Person’s name and Birthdate information is retrieved from an excel file. A
                         
                         
                         
-                        <a style="font-size: 30px;">Working @ <a id="about-info" style="font-size: 30px; font-style: italic;">nowhere</a><br></a><br>
-                        <a style="font-size: 30px; letter-spacing: 0.4vw;">Main Skills : </a><br>
+                        <a id="des2" style="font-size: 30px;">Working @ <a id="about-info" style="font-size: 30px; font-style: italic;">nowhere</a><br></a><br>
+                        <a id="des3" style="font-size: 30px; letter-spacing: 0.4vw;">Main Skills : </a><br>
                         <a id="about-info">Python, HTML-CSS, Java, JavaScript</a><br><br>
                         <button class="download">Download CV<a href="Resume/Resume.pdf" download="Prashant-Resume"><svg class="download-svg" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"/></g></svg></a></button>
                     </p>
@@ -446,14 +446,21 @@ The Person’s name and Birthdate information is retrieved from an excel file. A
     </div>
 
     <article class="wide-cc2">
+        <div class="ic" id="ic">
         <img class="fp" style="width: 46px; height: 46px; border-radius: 50%;" src="imgs/prof_p_r.png">
+        <div class="coin" id="coin"></div>
+        </div>
         <p class="copyright">Copyright © <script>document.write(new Date().getFullYear());</script> PORTFOLIO</p>
         <p class="design">Designed by <span class="namet">Prashant</span></p>
     </article>
 
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <div class="revealM">
+    <div id="amessage" class="message-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    </div>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
     emailjs.init('KbbcHcvs0hypfwTvU')
     </script>
