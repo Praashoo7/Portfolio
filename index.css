@@ -231,7 +231,7 @@ nav{
   font-size: 2em;
   text-align: right;
   margin-inline: 1rem;
-  color: red;
+  color: var(--title-);
   margin-bottom: 0.1em;
   overflow: hidden;
 }
@@ -1202,6 +1202,7 @@ nav{
   --w-: white;
   --icon-color: black;
   --chall-btns-:rgb(201, 79, 253);
+  --title-: red;
 }
 /* dark mode css variables */
 [data-theme="dark"] {
@@ -1244,6 +1245,7 @@ nav{
   --w-: black;;
   --icon-color: white;
   --chall-btns-: #252525;
+  --title-: skyblue;
 }
 
 /* css to style it like a toggle switch*/
