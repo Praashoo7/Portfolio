@@ -726,9 +726,11 @@ document.addEventListener("DOMContentLoaded", function () {
 /*<!---------------------------------------------------------------------- CACHED-IMAGE ---------------------------------------------------------------------->*/
 
 
-const cachedImage = document.getElementById("meimg");
+const preloadedImage = new Image();
 
-cachedImage.onload = () => {
-    cachedImage.setAttribute("crossorigin", "anonymous");
-    cachedImage.style.display = "none";
+preloadedImage.src = "imgs/me.jpg";
+
+preloadedImage.onload = () => {
+    const meimg = document.getElementById("meimg");
+    meimg.src = preloadedImage.src;
 };
