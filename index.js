@@ -726,6 +726,17 @@ document.addEventListener("DOMContentLoaded", function () {
 /*<!---------------------------------------------------------------------- CACHED ---------------------------------------------------------------------->*/
 
 
+const preloadedImage = new Image();
+
+preloadedImage.src = "imgs/me.jpg";
+
+preloadedImage.onload = () => {
+    const meimg = document.getElementById("meimg");
+    meimg.src = preloadedImage.src;
+};
+
+
+
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('my-cache-name')
