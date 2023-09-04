@@ -712,3 +712,12 @@ function showMessage1(message, duration) {
   requestAnimationFrame(animate);
 
 }
+
+
+/*<!---------------------------------------------------------------------- CURRENT-YEAR ---------------------------------------------------------------------->*/
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentYear = new Date().getFullYear();
+  document.getElementById("year-c").textContent = new Date().getFullYear();
+});
