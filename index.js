@@ -728,10 +728,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const cachedImage = document.getElementById("meimg");
 
-// Set cache control headers for the image
 cachedImage.onload = () => {
-    // Set the "max-age" cache directive to 1 hour (3600 seconds)
     cachedImage.setAttribute("crossorigin", "anonymous");
-    cachedImage.naturalHeight; // This line triggers the loading and caching
-    cachedImage.style.display = "none"; // Hide the image
+    cachedImage.style.display = "none";
 };
