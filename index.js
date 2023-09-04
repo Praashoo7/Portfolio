@@ -733,9 +733,9 @@ preloadedImage.onload = () => {
     meimg.src = preloadedImage.src;
 };
 
-const preloadedImage = new Image();
-preloadedImage.src = "imgs/prof_p_r.jpg";
-preloadedImage.onload = () => {
+const preloadedImage1 = new Image();
+preloadedImage1.src = "imgs/prof_p_r.jpg";
+preloadedImage1.onload = () => {
     const meimg = document.getElementById("mepimg");
-    meimg.src = preloadedImage.src;
+    meimg.src = preloadedImage1.src;
 };
