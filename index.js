@@ -727,29 +727,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const preloadedImage = new Image();
-
 preloadedImage.src = "imgs/me.jpg";
-
 preloadedImage.onload = () => {
     const meimg = document.getElementById("meimg");
     meimg.src = preloadedImage.src;
 };
 
-
-
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('my-cache-name')
-      .then(function(cache) {
-        return cache.addAll([
-          '/index.html',
-          '/index.css',
-          '/index.js',
-          '/imgs/me.png',
-          '/imgs/prof_p_r.png',
-          '/font/N27-Regular.otf',
-          '/font/AnticallyRegular-OVox8.ttf'
-        ]);
-      })
-  );
-});
+const preloadedImage = new Image();
+preloadedImage.src = "imgs/prof_p_r.jpg";
+preloadedImage.onload = () => {
+    const meimg = document.getElementById("mepimg");
+    meimg.src = preloadedImage.src;
+};
