@@ -726,16 +726,54 @@ document.addEventListener("DOMContentLoaded", function () {
 /*<!---------------------------------------------------------------------- CACHED ---------------------------------------------------------------------->*/
 
 
-const preloadedImage = new Image();
-preloadedImage.src = "imgs/me.jpg";
-preloadedImage.onload = () => {
-    const meimg = document.getElementById("meimg");
-    meimg.src = preloadedImage.src;
-};
+// Create an array to store promises for preloaded assets
+const preloadPromises = [];
 
-const preloadedImage1 = new Image();
-preloadedImage1.src = "imgs/prof_p_r.png";
-preloadedImage1.onload = () => {
-    const mepimg = document.getElementById("mepimg");
-    mepimg.src = preloadedImage1.src;
-};
+// Function to preload an image
+function preloadImage(src) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = resolve;
+    image.onerror = reject;
+    image.src = src;
+  });
+}
+
+// Function to preload a font
+function preloadFont(fontName, fontURL) {
+  return new Promise((resolve, reject) => {
+    const font = new FontFace(fontName, `url(${fontURL})`);
+    font.load().then(resolve).catch(reject);
+  });
+}
+
+// URLs of the images and fonts you want to cache
+const imageUrls = [
+  'imgs/me.jpg',
+  'imgs/prof_p_r.png',
+];
+
+const fontUrls = [
+  { name: 'Font1', url: 'font/N27-Regular.otf' },
+  { name: 'Font2', url: 'font/AnticallyRegular-OVox8.ttf' },
+];
+
+// Preload images
+imageUrls.forEach((imageUrl) => {
+  preloadPromises.push(preloadImage(imageUrl));
+});
+
+// Preload fonts
+fontUrls.forEach((font) => {
+  preloadPromises.push(preloadFont(font.name, font.url));
+});
+
+// Wait for all promises to resolve (i.e., all assets are preloaded)
+Promise.all(preloadPromises)
+  .then(() => {
+    console.log('All assets are preloaded and cached.');
+    // You can now use the cached images and fonts in your application.
+  })
+  .catch((error) => {
+    console.error('Failed to preload some assets:', error);
+  });
