@@ -721,3 +721,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentYear = new Date().getFullYear();
   document.getElementById("year-c").textContent = new Date().getFullYear();
 });
+
+
+/*<!---------------------------------------------------------------------- CACHED-IMAGE ---------------------------------------------------------------------->*/
+
+
+const cachedImage = document.getElementById("meimg");
+cachedImage.onload = () => {
+    cachedImage.setAttribute("crossorigin", "anonymous");
+    cachedImage.style.display = "none";
+};
+
+const cachedImage1 = document.getElementById("mepimg");
+cachedImage1.onload = () => {
+    cachedImage1.setAttribute("crossorigin", "anonymous");
+    cachedImage1.style.display = "none";
+};
