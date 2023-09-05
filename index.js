@@ -727,16 +727,16 @@ document.addEventListener("DOMContentLoaded", function () {
 /*<!---------------------------------------------------------------------- CACHED ---------------------------------------------------------------------->*/
 
 
-const preloadedImage = new Image();
-preloadedImage.src = "imgs/me.jpg";
-preloadedImage.onload = () => {
+const preloadedImage1 = new Image();
+preloadedImage1.src = "imgs/me.jpg";
+preloadedImage1.onload = () => {
     const meimg = document.getElementById("meimg");
-    meimg.src = preloadedImage.src;
+    meimg.src = preloadedImage1.src;
 };
 
-const preloadedImage1 = new Image();
-preloadedImage1.src = "imgs/prof_p_r.png";
-preloadedImage1.onload = () => {
+const preloadedImage2 = new Image();
+preloadedImage2.src = "imgs/prof_p_r.png";
+preloadedImage2.onload = () => {
     const mepimg = document.getElementById("mepimg");
-    mepimg.src = preloadedImage1.src;
+    mepimg.src = preloadedImage2.src;
 };
