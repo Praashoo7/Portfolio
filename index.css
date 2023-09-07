@@ -1,11 +1,13 @@
 @font-face {
   font-family: N27;
   src: url("font/N27-Regular.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: A1;
   src: url("font/AnticallyRegular-OVox8.ttf");
+  font-display: swap;
 }
 
 .namet{
