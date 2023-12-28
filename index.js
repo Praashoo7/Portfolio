@@ -733,10 +733,3 @@ preloadedImage.onload = () => {
     const meimg = document.getElementById("meimg");
     meimg.src = preloadedImage.src;
 };
-
-
-
-      var output = document.getElementById('output');
-      function stopBack() {
-         window.history.go(1);
-      }
