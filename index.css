@@ -1479,7 +1479,7 @@ mask-image: linear-gradient(45deg,black 25%,rgba(0,0,0,.2) 50%,black 75%);
 mask-size: 800%;
 -webkit-mask-position: 0;
 mask-position: 0;
-animation: shine 5s ease-in-out infinite;
+animation: shine 2s ease-in-out infinite;
 transition: .2s ease-in-out;
 }
 @keyframes shine {
