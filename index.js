@@ -531,6 +531,7 @@ animateButton.addEventListener('click', () => {
   
     if (clickCounter === 10) {
       showMessage("Oh, you like the Animation!", 3000);
+      document.getElementById("ic").style.animation = "none";
     } else if (clickCounter === 35) {
       showMessage("I guess you can stop Now. How many Coins do you Need?", 3000);
     } else if (clickCounter === 75) {
