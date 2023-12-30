@@ -1473,6 +1473,31 @@ display: flex;
 align-items: center;
 justify-content: center;
 z-index: 10;
+-webkit-mask-image: linear-gradient(45deg,black 25%,rgba(0,0,0,.2) 50%,black 75%);
+mask-image: linear-gradient(45deg,black 25%,rgba(0,0,0,.2) 50%,black 75%);
+-webkit-mask-size: 800%;
+mask-size: 800%;
+-webkit-mask-position: 0;
+mask-position: 0;
+animation: shine 5s ease-in-out infinite;
+transition: .2s ease-in-out;
+}
+@keyframes shine {
+  100%{
+    transition: mask-position 2s ease,-webkit-mask-position 2s ease;
+    -webkit-mask-position: 120%;
+    mask-position: 120%;
+    opacity: 1;
+  }
+}
+.ic:hover{
+-webkit-mask-image: none;
+mask-image: none;
+-webkit-mask-size: none;
+mask-size: none;
+-webkit-mask-position: none;
+mask-position: 0;
+animation: none;
 }
 
 .coin {
