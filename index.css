@@ -831,7 +831,7 @@ nav{
   justify-content: space-between;
 }
 
-@media (max-width: 63.5rem) {
+@media (max-width: 75rem) {
   .wide-c{
     grid-column: span 3;
   }
@@ -882,7 +882,7 @@ nav{
   }
 }
 
-@media only screen and (min-width: 37rem) {
+@media only screen and (min-width: 46.875rem) {
 
   .nav-title{
     padding: 0.75rem;
@@ -988,7 +988,7 @@ nav{
 }
 
 
-@media only screen and (min-width: 63.5rem) {
+@media only screen and (min-width: 75rem) {
 
   .dark {
     display: flex;
