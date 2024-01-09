@@ -79,9 +79,21 @@ function sendmail(){
 
           }
       )
-      .catch((err)=>console.log(err));
+      .catch(err => {
+        console.log(err);
+        
+        b.innerHTML = "Sorry "+n+", An error occurred. Please try again later!";
+        b.style.textTransform = "none";
+        b.style.opacity = "1";
+
+        setTimeout(function() {
+          b.innerHTML = originalText;
+          b.style.textTransform = "uppercase";
+        }, 4000);
+
+      });
       } else {
-        b.innerHTML = "Hi "+n+", Please check your Internet Connection.";
+        b.innerHTML = "Hi "+n+", Please check your Internet Connection!";
         b.style.textTransform = "none";
         b.style.opacity = "1";
 
