@@ -89,7 +89,7 @@ function sendmail(){
         setTimeout(function() {
           b.innerHTML = originalText;
           b.style.textTransform = "uppercase";
-        }, 4000);
+        }, 4000); 
 
       });
       } else {
