@@ -127,7 +127,7 @@ body {
   color: white;
   background-color: var(--bg-color);
   transition: .4s ease-in-out;
-  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 img,
