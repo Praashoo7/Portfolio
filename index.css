@@ -190,9 +190,9 @@ nav{
   align-items: center;
   gap: 0.5em;
   border-radius: 10px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  border: 1px solid var(--b-);
+  border-top-right-radius: 1.65em;
+  border-bottom-right-radius: 1.65em;
+  border: 1px solid black;
   padding: 0.125rem;
   margin-block-end: 0.6rem;
   background-color: #F8EBC9;
