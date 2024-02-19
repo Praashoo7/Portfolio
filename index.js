@@ -228,79 +228,14 @@ function goToC() {
 }
 
 
-/*<!---------------------------------------------------------------------- IMAGE-HOVER ---------------------------------------------------------------------->*/
-
-
-/* Store the element in el */
-let el = document.getElementById('tilt')
-
-/* Get the height and width of the element */
-const height = el.clientHeight
-const width = el.clientWidth
-
-/*
-  * Add a listener for mousemove event
-  * Which will trigger function 'handleMove'
-  * On mousemove
-  */
-el.addEventListener('mousemove', handleMove)
-
-/* Define function a */
-function handleMove(e) {
-  /*
-    * Get position of mouse cursor
-    * With respect to the element
-    * On mouseover
-    */
-  /* Store the x position */
-  const xVal = e.layerX
-  /* Store the y position */
-  const yVal = e.layerY
-  
-  /*
-    * Calculate rotation valuee along the Y-axis
-    * Here the multiplier 20 is to
-    * Control the rotation
-    * You can change the value and see the results
-    */
-  const yRotation = 5 * ((xVal - width / 2) / width)
-  
-  /* Calculate the rotation along the X-axis */
-  const xRotation = -5 * ((yVal - height / 2) / height)
-  
-  /* Generate string for CSS transform property */
-  const string = 'perspective(500px) scale(1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
-  
-  /* Apply the calculated transformation */
-  el.style.transform = string
-}
-
-/* Add listener for mouseout event, remove the rotation */
-el.addEventListener('mouseout', function() {
-  el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
-})
-
-/* Add listener for mousedown event, to simulate click */
-el.addEventListener('mousedown', function() {
-  el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
-})
-
-/* Add listener for mouseup, simulate release of mouse click */
-el.addEventListener('mouseup', function() {
-  el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
-})
-
-
 /*<!---------------------------------------------------------------------- SCROLL-ANIMATIONS ---------------------------------------------------------------------->*/
 
-
-function reveal00() {
-  var reveals = document.querySelectorAll(".reveal00");
+function reveal(className, elementVisible) {
+  var reveals = document.querySelectorAll("." + className);
 
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 0;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -310,202 +245,22 @@ function reveal00() {
   }
 }
 
-window.addEventListener("scroll", reveal00);
-window.addEventListener("DOMContentLoaded", reveal00);
+function setupRevealListeners() {
+  var classNames = ["reveal00", "reveal01", "reveal02", "reveal03", "reveal04", "revealM", "revealC", "reveal", "reveal1", "reveal11", "reveal111"];
+  var elementVisibles = [0, 0, 0, 0, 0, -100, -10, 0, 90, 90, 100];
 
-function reveal01() {
-  var reveals = document.querySelectorAll(".reveal01");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 0;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-window.addEventListener("scroll", reveal01);
-window.addEventListener("DOMContentLoaded", reveal01);
-
-function reveal02() {
-  var reveals = document.querySelectorAll(".reveal02");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 0;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
+  classNames.forEach(function(className, index) {
+    window.addEventListener("scroll", function() {
+      reveal(className, elementVisibles[index]);
+    });
+    window.addEventListener("DOMContentLoaded", function() {
+      reveal(className, elementVisibles[index]);
+    });
+  });
 }
 
-window.addEventListener("scroll", reveal02);
-window.addEventListener("DOMContentLoaded", reveal02);
-
-function reveal03() {
-  var reveals = document.querySelectorAll(".reveal03");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 0;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal03);
-window.addEventListener("DOMContentLoaded", reveal03);
-
-function reveal04() {
-  var reveals = document.querySelectorAll(".reveal04");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 0;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal04);
-window.addEventListener("DOMContentLoaded", reveal04);
-
-
-function revealM() {
-  var reveals = document.querySelectorAll(".revealM");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = -100;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", revealM);
-window.addEventListener("DOMContentLoaded", revealM);
-
-
-function revealC() {
-  var reveals = document.querySelectorAll(".revealC");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = -10;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", revealC);
-window.addEventListener("DOMContentLoaded", revealC);
-
-
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 0;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
-window.addEventListener("DOMContentLoaded", reveal);
-
-
-function reveal1() {
-  var reveals = document.querySelectorAll(".reveal1");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 90;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal1);
-window.addEventListener("DOMContentLoaded", reveal1);
-
-
-function reveal11() {
-  var reveals = document.querySelectorAll(".reveal11");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 90;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal11);
-window.addEventListener("DOMContentLoaded", reveal11);
-
-function reveal111() {
-  var reveals = document.querySelectorAll(".reveal111");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal111);
-window.addEventListener("DOMContentLoaded", reveal111);
+// Setup event listeners for reveal functions
+setupRevealListeners();
 
 
 /*<!---------------------------------------------------------------------- Click-Me ---------------------------------------------------------------------->*/
