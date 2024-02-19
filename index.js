@@ -741,7 +741,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const preloadedImage = new Image();
-preloadedImage.src = "imgs/me.jpg";
+preloadedImage.src = "imgs/me.webp";
 preloadedImage.onload = () => {
     const meimg = document.getElementById("meimg");
     meimg.src = preloadedImage.src;
