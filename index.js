@@ -501,29 +501,3 @@ preloadedImage.onload = () => {
     const meimg = document.getElementById("meimg");
     meimg.src = preloadedImage.src;
 };
-
-
-
-// Assume we have a static CSS file named 'styles.css'
-
-// Check if the resource is in local storage
-var cachedStyles = localStorage.getItem('styles');
-
-if (cachedStyles) {
-    // Load from local storage
-    var styleTag = document.createElement('style');
-    styleTag.innerHTML = cachedStyles;
-    document.head.appendChild(styleTag);
-} else {
-    // Fetch from server
-    fetch('styles.css')
-        .then(response => response.text())
-        .then(css => {
-            // Store in local storage
-            localStorage.setItem('styles', css);
-            // Apply styles
-            var styleTag = document.createElement('style');
-            styleTag.innerHTML = css;
-            document.head.appendChild(styleTag);
-        });
-}
