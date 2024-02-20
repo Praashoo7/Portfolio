@@ -10,7 +10,7 @@
 
 ![404Image](imgs/ReadMe-Files/404Image.png)
 
-![4040ImageC](imgs/ReadMe-Files/404ImageC.png)<br><br>
+![4040ImageC](imgs/ReadMe-Files/404ImageC.png)<br>
 
 Check Out Full Website Here : [Portfolio](https://praashoo7.github.io/Portfolio/)<br><br>
 
