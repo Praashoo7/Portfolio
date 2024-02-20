@@ -1393,7 +1393,7 @@ transition: 1s ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 @media (max-width: 425px)  {
   .reveal00 {
-    transition: 1ms ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: 0s ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
   }
 }
 .reveal00.active{
