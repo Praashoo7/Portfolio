@@ -1391,6 +1391,12 @@ width: 0;
 opacity: 0;
 transition: 1s ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
+@media only screen and (max-width: 425px) {
+  .reveal00{
+    opacity: 0;
+    transition: 0.1s ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+}
 .reveal00.active{
 opacity: 1;
 }
