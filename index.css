@@ -1387,15 +1387,14 @@ width: 0;
 
 /* SCROLL-ANIMATIONS */
 
-@media only screen and (max-width: 425px) {
-  .reveal00{
-    opacity: 0;
-    transition: 0s ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  }
-}
 .reveal00{
 opacity: 0;
 transition: 1s ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+@media (max-width: 425px)  {
+  .reveal00 {
+    transition: 1ms ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
 }
 .reveal00.active{
 opacity: 1;
