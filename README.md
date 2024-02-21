@@ -28,7 +28,6 @@ Check Out Full Website Here : [Portfolio](https://praashoo7.github.io/Portfolio/
   - [Check Out PageSpeed Insights [Desktop]](https://pagespeed.web.dev/analysis/https-praashoo7-github-io-Portfolio/0iu3kvfrmd?form_factor=desktop)
   - [Check Out Lighthouse Report [Desktop]](https://htmlpreview.github.io/?https://github.com/Praashoo7/Portfolio/blob/main/ReadMe-Files/praashoo7.github.io-20240220T193308.html)<br><br>
 
-  Note : Removing the G-Tag significantly improves webpage performance across all devices!<br><br>
 
 ## Credits
 
