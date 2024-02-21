@@ -10,7 +10,7 @@
 
 ![404Image](imgs/ReadMe-Files/404Image.png)
 
-![4040ImageC](imgs/ReadMe-Files/404ImageC.png)<br><br>
+![4040ImageC](imgs/ReadMe-Files/404ImageC.png)<br>
 
 Check Out Full Website Here : [Portfolio](https://praashoo7.github.io/Portfolio/)<br><br>
 
@@ -31,8 +31,8 @@ Check Out Full Website Here : [Portfolio](https://praashoo7.github.io/Portfolio/
 
 
 ## Credits
-- N27 font from [atipo foundry](www.atipofoundry.com)
-- AnticallyRegular font from [FontSpace](www.fontspace.com) by Niskala Huruf
+- N27 font from [atipo foundry](https://www.atipofoundry.com/)
+- AnticallyRegular font from [FontSpace](https://www.fontspace.com/) by Niskala Huruf
 
 
 ## License
