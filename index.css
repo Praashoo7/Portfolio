@@ -131,6 +131,7 @@ body {
   font-weight: bold;
   color: white;
   background-color: var(--bg-color);
+  transition: .4s ease-in-out;
   overflow-x: hidden;
 }
 
