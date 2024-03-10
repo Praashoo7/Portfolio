@@ -665,7 +665,6 @@ nav{
   color: var(--b-);
   text-transform: uppercase;
   margin-inline: 1rem;
-  padding-bottom: 0.25em;
 }
 .wide:hover .data2{
   scale: 1.05;
