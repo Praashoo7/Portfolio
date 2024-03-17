@@ -31,8 +31,9 @@ Check Out Full Website Here : [Portfolio](https://praashoo7.github.io/Portfolio/
 
 ## Credits
 
-- N27 font from [atipo foundry](https://www.atipofoundry.com/)
-- AnticallyRegular font from [FontSpace](https://www.fontspace.com/antically-font-f77217) by Niskala Huruf
+- N27 font from [atipo foundry.](https://www.atipofoundry.com/)
+- AnticallyRegular font from [FontSpace](https://www.fontspace.com/antically-font-f77217) by Niskala Huruf.
+- 404 Page design INSPIRED by [Stefan Devai.](https://dribbble.com/shots/9520030-Old-TV-illustration).
 
 
 ## License
