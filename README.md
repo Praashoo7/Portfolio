@@ -32,7 +32,7 @@ Check Out Full Website Here : [Portfolio](https://praashoo7.github.io/Portfolio/
 ## Credits
 
 - N27 font from [atipo foundry](https://www.atipofoundry.com/)
-- AnticallyRegular font from [FontSpace](https://www.fontspace.com/) by Niskala Huruf
+- AnticallyRegular font from [FontSpace](https://www.fontspace.com/antically-font-f77217) by Niskala Huruf
 
 
 ## License
