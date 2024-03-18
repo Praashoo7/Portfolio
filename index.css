@@ -292,7 +292,6 @@ nav{
   cursor: pointer;
   background-color: crimson;
   color: white;
-  border-top: 1px solid white;
 }
 .Btn:hover::after{
   opacity: 1;
@@ -446,6 +445,24 @@ nav{
   opacity: 0;
   transition: .2s ease-in-out;
   transform: translateX(-5px);
+}
+.Btn4_pair{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Btn4_pair1{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 0px;
+  border: none;
+  border-top: 1px solid var(--b-);
+  border-right: 1px solid var(--b-);
+}
+#Btn4_pair2{
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border: none;
+  border-top: 1px solid var(--b-);
 }
 .github{
   fill: var(--b-);
@@ -887,7 +904,25 @@ nav{
     justify-content: center;
   }
 }
-
+@media only screen and (max-width: 430px){
+  .Btn4_pair{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #Btn4_pair1{
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--b-);
+  }
+  #Btn4_pair2{
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    border-top: 1px solid var(--b-);
+  }
+}
 @media only screen and (min-width: 46.875rem) {
 
   .nav-title{
