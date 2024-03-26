@@ -482,6 +482,17 @@ function showMessage1(message, duration) {
 }
 
 
+
+/*<!---------------------------------------------------------------------- CURRENT-YEAR ---------------------------------------------------------------------->*/
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentYear = new Date().getFullYear();
+  document.getElementById("year-c").textContent = new Date().getFullYear();
+});
+
+
+
 /*<!---------------------------------------------------------------------- CACHED ---------------------------------------------------------------------->*/
 
 
