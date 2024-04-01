@@ -186,7 +186,7 @@ updateDate();
 
 
 function mailDefault(){
-  var email = "praashme@gmail.com";
+  var email = "rnttl90@gmail.com";
   window.open(`mailto:${email}`);
 }
 
