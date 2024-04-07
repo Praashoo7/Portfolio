@@ -1032,6 +1032,21 @@ nav{
 }
 
 
+@media only screen and (max-width: 315px) {
+  #emailText{
+    width: 170px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    text-align: start;
+    text-decoration: none;
+    text-wrap: wrap;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
 @media only screen and (min-width: 75rem) {
 
   .dark {
