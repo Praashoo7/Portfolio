@@ -502,3 +502,105 @@ preloadedImage.onload = () => {
     const meimg = document.getElementById("meimg");
     meimg.src = preloadedImage.src;
 };
+
+
+
+/*<!---------------------------------------------------------------------- PROJECT-HOVER-IMAGES ---------------------------------------------------------------------->*/
+
+
+function setupSlideshow(blockId, lightImages, darkImages) {
+  const block = document.getElementById(blockId);
+  const image = block.querySelector('.image-wrapper');
+  let currentIndex = -1;
+  let lastX = 0;
+  let timer;
+
+  block.addEventListener("mousemove", function(event) {
+      const currentX = event.clientX;
+      clearTimeout(timer);
+      image.style.transform = `rotate(${currentX > lastX ? -5 : 5}deg)`;
+      image.style.animation = "";
+      timer = setTimeout(() => image.style.transform = "", 10);
+      lastX = currentX;
+
+      if (!image.getAttribute('src')) {
+        const currentImages = getCurrentImages();
+        image.setAttribute('src', currentImages[0]);
+      }
+  });
+
+  block.addEventListener('mousemove', function(event) {
+      const containerWidth = block.offsetWidth;
+      const fixedMarginRight = 50;
+      const imageWidth = image.offsetWidth;
+      const maxLeftMargin = containerWidth - imageWidth;
+      const mouseX = event.pageX - block.getBoundingClientRect().left;
+      const marginLeft = Math.min(Math.max(mouseX - (imageWidth / 2), 0), maxLeftMargin - fixedMarginRight);
+      image.style.marginLeft = marginLeft + 'px';
+  });
+
+  const slideshowImg = block.querySelector('.image-wrapper img');
+  const slideshowContainer = block.querySelector('.image-wrapper');
+  let intervalId;
+
+  function startSlideshow() {
+    intervalId = setInterval(nextImage, 4000);
+  }
+
+  function stopSlideshow() {
+      clearInterval(intervalId);
+  }
+
+  block.addEventListener('mouseenter', function(event) { if (navigator.onLine) {image.style.display = 'block';startSlideshow();}else{stopSlideshow();image.style.display = 'block';/*const content = navigator.onLine ? "..." : "No Connection!";document.documentElement.style.setProperty('--image-content', '"' + content + '"');*/}});
+  block.addEventListener('mouseleave', stopSlideshow);
+
+  function getCurrentTheme() {
+      return localStorage.getItem('theme');
+  }
+
+  function getCurrentImages() {
+      const theme = getCurrentTheme();
+      return theme === 'dark' ? darkImages : lightImages;
+  }
+
+  function resetCurrentIndex() {
+      currentIndex = -1;
+      nextImage();
+  }
+
+  function nextImage() {
+      currentIndex++;
+      if (currentIndex >= getCurrentImages().length) currentIndex = 0;
+      slideshowContainer.classList.add('image-wrapper');
+      setTimeout(() => {
+          slideshowImg.src = navigator.onLine ? getCurrentImages()[currentIndex] : '';
+          const content = navigator.onLine ? "..." : "No Connection!";
+          document.documentElement.style.setProperty('--image-content', '"' + content + '"');
+      }, 500);
+      slideshowImg.onload = () => slideshowContainer.classList.remove('image-wrapper');
+  }
+
+  function updateImageContent() {
+    const content = navigator.onLine ? "..." : "No Connection!";
+    document.documentElement.style.setProperty('--image-content', '"' + content + '"');
+  }
+
+  updateImageContent();
+
+  document.addEventListener('DOMContentLoaded', resetCurrentIndex);
+  document.getElementById('themeswitch-second').addEventListener('click', resetCurrentIndex); // Reset when theme is changed
+}
+
+const lightModeImages1 = ["https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Light_Mode/Login_Light.png", "https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Light_Mode/HomePage_Light.png", "https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Light_Mode/AddItemsPage_Light.png", "https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Light_Mode/Billing_Light.png", "https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Light_Mode/Sales_Light.png"];
+const darkModeImages1 = ["https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Dark_Mode/Login_Dark1.png", "https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Dark_Mode/HomePage_Dark.png", "https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Dark_Mode/AddItemsPage_Dark.png", "https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Dark_Mode/Billing_Dark.png", "https://praashoo7.github.io/Figma-Front-End/ReadMe-Images/Dark_Mode/Sales_Dark.png"];
+const lightModeImages2 = ["https://github.com/Praashoo7/Photo-Gallery-React/blob/main/public/ReadMe-Files/ReadMe_Image1R.png?raw=true", "https://github.com/Praashoo7/Photo-Gallery-React/blob/main/public/ReadMe-Files/ReadMe_Image2R.png?raw=true"];
+const darkModeImages2 = ["https://github.com/Praashoo7/Photo-Gallery-React/blob/main/public/ReadMe-Files/ReadMe_Image1R.png?raw=true", "https://github.com/Praashoo7/Photo-Gallery-React/blob/main/public/ReadMe-Files/ReadMe_Image2R.png?raw=true"];
+const lightModeImages3 = ["https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/Color-Blindness-Simulator.png", "https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/ButtonB.png"];
+const darkModeImages3 = ["https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/Color-Blindness-Simulator.png", "https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/ButtonB.png"];
+const lightModeImages4 = ["https://praashoo7.github.io/Web/ReadMe-Images/1P.png", "https://praashoo7.github.io/Web/ReadMe-Images/2P.png", "https://praashoo7.github.io/Web/ReadMe-Images/1G.png", "https://praashoo7.github.io/Web/ReadMe-Images/2G.png"];
+const darkModeImages4 = ["https://praashoo7.github.io/Web/ReadMe-Images/1PD.png", "https://praashoo7.github.io/Web/ReadMe-Images/2PD.png", "https://praashoo7.github.io/Web/ReadMe-Images/1GD.png", "https://praashoo7.github.io/Web/ReadMe-Images/2GD.png"];
+
+setupSlideshow('FFE1', lightModeImages1, darkModeImages1);
+setupSlideshow('FFE2', lightModeImages2, darkModeImages2);
+setupSlideshow('FFE3', lightModeImages3, darkModeImages3);
+setupSlideshow('FFE4', lightModeImages4, darkModeImages4);
