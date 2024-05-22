@@ -600,16 +600,6 @@ function setupSlideshow(blockId, lightImages, darkImages) {
         onMouseMoveMargin(event);
       });
     });
-  
-    block.addEventListener('mouseenter', () => {
-      if (navigator.onLine) {
-        imageWrapper.style.display = 'block';
-        startSlideshow();
-      } else {
-        stopSlideshow();
-        imageWrapper.style.display = 'block';
-      }
-    });
 
   document.addEventListener('DOMContentLoaded', resetCurrentIndex);
   document.getElementById('themeswitch-second').addEventListener('click', resetCurrentIndex); // Reset when theme is changed
