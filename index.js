@@ -515,21 +515,28 @@ function setupSlideshow(blockId, lightImages, darkImages) {
   let lastX = 0;
   let timer;
 
-  block.addEventListener("mousemove", function(event) {
+  const debounce = (func, wait) => {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    };
+  
+    const onMouseMove = debounce((event) => {
       const currentX = event.clientX;
       clearTimeout(timer);
       image.style.transform = `rotate(${currentX > lastX ? -5 : 5}deg)`;
-      image.style.animation = "";
       timer = setTimeout(() => image.style.transform = "", 10);
       lastX = currentX;
-
+  
       if (!image.getAttribute('src')) {
         const currentImages = getCurrentImages();
         image.setAttribute('src', currentImages[0]);
       }
-  });
-
-  block.addEventListener('mousemove', function(event) {
+    });
+  
+    const onMouseMoveMargin = (event) => {
       const containerWidth = block.offsetWidth;
       const fixedMarginRight = 50;
       const imageWidth = image.offsetWidth;
@@ -537,7 +544,7 @@ function setupSlideshow(blockId, lightImages, darkImages) {
       const mouseX = event.pageX - block.getBoundingClientRect().left;
       const marginLeft = Math.min(Math.max(mouseX - (imageWidth / 2), 0), maxLeftMargin - fixedMarginRight);
       image.style.marginLeft = marginLeft + 'px';
-  });
+    };
 
   const slideshowImg = block.querySelector('.image-wrapper img');
   const slideshowContainer = block.querySelector('.image-wrapper');
@@ -586,6 +593,23 @@ function setupSlideshow(blockId, lightImages, darkImages) {
   }
 
   updateImageContent();
+
+  block.addEventListener("mousemove", (event) => {
+      requestAnimationFrame(() => {
+        onMouseMove(event);
+        onMouseMoveMargin(event);
+      });
+    });
+  
+    block.addEventListener('mouseenter', () => {
+      if (navigator.onLine) {
+        imageWrapper.style.display = 'block';
+        startSlideshow();
+      } else {
+        stopSlideshow();
+        imageWrapper.style.display = 'block';
+      }
+    });
 
   document.addEventListener('DOMContentLoaded', resetCurrentIndex);
   document.getElementById('themeswitch-second').addEventListener('click', resetCurrentIndex); // Reset when theme is changed
