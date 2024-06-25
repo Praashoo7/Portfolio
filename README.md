@@ -33,7 +33,7 @@ Check Out Full Website Here : [Portfolio](https://praashoo7.github.io/Portfolio/
 
 - N27 font from [atipo foundry.](https://www.atipofoundry.com/)
 - AnticallyRegular font from [FontSpace](https://www.fontspace.com/antically-font-f77217) by Niskala Huruf.
-- 404 Page design INSPIRED by one of Stefan Devai's [Tv Designs.](https://dribbble.com/shots/9520030-Old-TV-illustration)
+- 404 Page design INSPIRED by one of Stefan Devai's [Tv Design.](https://dribbble.com/shots/9520030-Old-TV-illustration)
 - Profile[Monkey] Image is from [DALL·E.](https://openai.com/index/dall-e)
 
 
