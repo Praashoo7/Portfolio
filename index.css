@@ -10,6 +10,13 @@
   font-display: swap;
 }
 
+::-moz-selection {
+  background: coral;
+}
+::selection {
+  background: coral;
+}
+
 .namet{
   font-size: 2em;
   font-family: A1;
