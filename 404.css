@@ -9,6 +9,14 @@
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  background: coral;
+}
+
+::selection {
+  background: coral;
+}
+
 body{
   background-color: var(--bg-color);
 }
