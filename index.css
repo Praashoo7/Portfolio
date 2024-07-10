@@ -425,7 +425,7 @@ nav{
   justify-content: space-between;
   background-color: #F1FCC0;
   border: none;
-  border-top: 1px solid var(--b-);
+  border-top: 1px solid black;
   padding: 1rem 2rem;
   color: black;
   text-transform: uppercase;
@@ -438,7 +438,6 @@ nav{
   cursor: pointer;
   background-color: crimson;
   color: white;
-  border-top: 1px solid white;
 }
 .Btn4:hover::after{
   opacity: 1;
@@ -462,14 +461,14 @@ nav{
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 0px;
   border: none;
-  border-top: 1px solid var(--b-);
-  border-right: 1px solid var(--b-);
+  border-top: 1px solid black;
+  border-right: 1px solid black;
 }
 #Btn4_pair2{
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 0px;
   border: none;
-  border-top: 1px solid var(--b-);
+  border-top: 1px solid black;
 }
 .github{
   fill: var(--b-);
