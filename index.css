@@ -166,6 +166,50 @@ p {
   font-size: 0.875rem;
 }
 
+
+
+/* DIWALI */
+
+.diwaliMain{
+  display: none;
+  cursor: pointer;
+}
+.Diwali, .Diwali1{
+  width: 45px; height: 45px; opacity: 0; position: fixed; top: 1.2em; left: 0.55em; z-index: 9999; transition: all 0.4s ease-in-out;
+}
+.Diwali1{
+  display: none;
+  opacity: 0;
+  z-index: 99999;
+  width: 100px; height: 70px;
+  top: 0;
+  left: 0;
+}
+/* .Diwali1{
+  display: none;
+  width: 100%;
+  height: 100dvh;
+  opacity: 0;
+  z-index: 99999;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+} */
+
+@media only screen and (max-width: 750px) {
+  .Diwali{
+    width: 35px; height: 35px; top: 1.7em; left: 0.65em;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .Diwali{
+    width: 25px; height: 25px; top: 2.35em; left: 0.8em;
+  }
+}
+
+
+
 header{
   position: -webkit-sticky;
   position: sticky;
@@ -1757,7 +1801,7 @@ color: red;
 }
 
 @media only screen and (max-width: 279px) {
-  header, .m1, .m2, .m3, .m4, .wide-cc2, .revealM{
+  header, .m1, .m2, .m3, .m4, .wide-cc2, .revealM, .Diwali{
       display: none;
   }
   body{
@@ -1794,7 +1838,7 @@ color: red;
   pointer-events: none;
   margin-top: -15em;
 }
-#image1, #image2, #image3, #image4{
+#image1, #image2, #image3, #image4, #image5{
   position: relative;
   overflow: hidden;
   min-width: 8em;
@@ -1808,7 +1852,7 @@ color: red;
 .image-wrapper{
   display: none;
 }
-#image1::after, #image2::after, #image3::after, #image4::after {
+#image1::after, #image2::after, #image3::after, #image4::after, #image5::after {
   content: var(--image-content, "...");
   border-radius: 12px;
   display: flex;
@@ -1835,7 +1879,10 @@ color: red;
   background-color: var(--image-after4);
   color: var(--icon-color);
 }
-#image1.image-wrapper:after, #image2.image-wrapper:after, #image3.image-wrapper:after, #image4.image-wrapper:after {
+#image5::after{
+  background-color: #00857d;
+}
+#image1.image-wrapper:after, #image2.image-wrapper:after, #image3.image-wrapper:after, #image4.image-wrapper:after, #image5.image-wrapper:after {
   opacity: 1;
 }
 .no-connection::after {
@@ -1844,16 +1891,7 @@ color: red;
 
 
 @media (hover: hover) { 
-  #FFE1:hover .container{
-    opacity: 1;
-  }
-  #FFE2:hover .container{
-    opacity: 1;
-  }
-  #FFE3:hover .container{
-    opacity: 1;
-  }
-  #FFE4:hover .container{
+  #FFE1:hover .container, #FFE2:hover .container, #FFE3:hover .container, #FFE4:hover .container, #FFE5:hover .container{
     opacity: 1;
   }
 }

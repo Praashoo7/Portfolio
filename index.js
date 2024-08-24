@@ -613,8 +613,78 @@ const lightModeImages3 = ["https://praashoo7.github.io/Color-Blindness-Simulator
 const darkModeImages3 = ["https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/Color-Blindness-Simulator.png", "https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/ButtonB.png"];
 const lightModeImages4 = ["https://praashoo7.github.io/Web/ReadMe-Images/1P.png", "https://praashoo7.github.io/Web/ReadMe-Images/2P.png", "https://praashoo7.github.io/Web/ReadMe-Images/1G.png", "https://praashoo7.github.io/Web/ReadMe-Images/2G.png"];
 const darkModeImages4 = ["https://praashoo7.github.io/Web/ReadMe-Images/1PD.png", "https://praashoo7.github.io/Web/ReadMe-Images/2PD.png", "https://praashoo7.github.io/Web/ReadMe-Images/1GD.png", "https://praashoo7.github.io/Web/ReadMe-Images/2GD.png"];
+const lightModeImages5 = ["https://praashoo7.github.io/21-Cards-Trick/imgs/ReadMe-Images/MAIN.png"];
+const darkModeImages5 = ["https://praashoo7.github.io/21-Cards-Trick/imgs/ReadMe-Images/MAIN.png"];
 
 setupSlideshow('FFE1', lightModeImages1, darkModeImages1);
 setupSlideshow('FFE2', lightModeImages2, darkModeImages2);
 setupSlideshow('FFE3', lightModeImages3, darkModeImages3);
 setupSlideshow('FFE4', lightModeImages4, darkModeImages4);
+setupSlideshow('FFE5', lightModeImages5, darkModeImages5);
+
+
+
+/*<!---------------------------------------------------------------------- HAPPY-DIWALI [It's here cause i like it!] ---------------------------------------------------------------------->*/
+
+
+const BASE_CALENDAR_URL = "https://www.googleapis.com/calendar/v3/calendars";
+const BASE_CALENDAR_ID_FOR_PUBLIC_HOLIDAY = "en.indian%23holiday@group.v.calendar.google.com"; 
+const API_KEY = 'AIzaSyAX8VCbv9kNkiKZ9Ba98WC7o43H_iq9WgI';
+
+const url = `${BASE_CALENDAR_URL}/${BASE_CALENDAR_ID_FOR_PUBLIC_HOLIDAY}/events?key=${API_KEY}`;
+
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const holidays = data.items;
+    const currentYear = new Date().getFullYear();
+    
+    const diwali = holidays.find(event => {
+      const eventYear = new Date(event.start.date || event.start.dateTime).getFullYear();
+      return event.summary.toLowerCase().includes('diwali') && eventYear === currentYear;
+    });
+    
+    if (diwali) {
+      const diwaliDate = new Date(diwali.start.date || diwali.start.dateTime);
+      diwaliDate.setHours(0, 0, 0, 0);
+      
+      var startDate = new Date(diwaliDate);
+      startDate.setDate(startDate.getDate() - 5);
+      const endDate = new Date(diwaliDate);
+      endDate.setDate(endDate.getDate() + 5);
+
+      // console.log('START', startDate);
+      // console.log('END', endDate);
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      
+      if (today >= startDate && today <= endDate) {
+        document.getElementById('diwaliMain').style.display = 'block';
+        setTimeout(() => {
+          document.getElementById('diwali').style.opacity = 1;
+        }, 400)
+      } else {
+        document.getElementById('diwaliMain').style.display = 'none';
+        document.getElementById('diwali').style.opacity = 0;
+      }
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching the calendar events:', error);
+  });
+
+  document.getElementById('diwaliMain').addEventListener('click', function() {
+    document.getElementById('diwali1').style.display = 'block';
+    setTimeout(() => {
+      document.getElementById('diwali1').style.opacity = 1;
+    }, 400)
+    const lottiePlayer = document.getElementById('diwali1');
+    lottiePlayer.stop();
+    lottiePlayer.play();
+  });
