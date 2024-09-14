@@ -1795,7 +1795,7 @@ color: red;
   pointer-events: none;
   margin-top: -15em;
 }
-#image1, #image2, #image3, #image4, #image5{
+#image1, #image2, #image3, #image4, #image5, #image6{
   position: relative;
   overflow: hidden;
   min-width: 8em;
@@ -1809,7 +1809,7 @@ color: red;
 .image-wrapper{
   display: none;
 }
-#image1::after, #image2::after, #image3::after, #image4::after, #image5::after {
+#image1::after, #image2::after, #image3::after, #image4::after, #image5::after, #image6::after {
   content: var(--image-content, "...");
   border-radius: 12px;
   display: flex;
@@ -1839,7 +1839,10 @@ color: red;
 #image5::after{
   background-color: #00857d;
 }
-#image1.image-wrapper:after, #image2.image-wrapper:after, #image3.image-wrapper:after, #image4.image-wrapper:after, #image5.image-wrapper:after {
+#image6::after{
+  background-color: #E6CFB9;
+}
+#image1.image-wrapper:after, #image2.image-wrapper:after, #image3.image-wrapper:after, #image4.image-wrapper:after, #image5.image-wrapper:after, #image6.image-wrapper:after {
   opacity: 1;
 }
 .no-connection::after {
@@ -1848,7 +1851,7 @@ color: red;
 
 
 @media (hover: hover) { 
-  #FFE1:hover .container, #FFE2:hover .container, #FFE3:hover .container, #FFE4:hover .container, #FFE5:hover .container{
+  #FFE1:hover .container, #FFE2:hover .container, #FFE3:hover .container, #FFE4:hover .container, #FFE5:hover .container, #FFE6:hover .container{
     opacity: 1;
   }
 }

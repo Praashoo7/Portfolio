@@ -615,9 +615,12 @@ const lightModeImages4 = ["https://praashoo7.github.io/Web/ReadMe-Images/1P.png"
 const darkModeImages4 = ["https://praashoo7.github.io/Web/ReadMe-Images/1PD.png", "https://praashoo7.github.io/Web/ReadMe-Images/2PD.png", "https://praashoo7.github.io/Web/ReadMe-Images/1GD.png", "https://praashoo7.github.io/Web/ReadMe-Images/2GD.png"];
 const lightModeImages5 = ["https://praashoo7.github.io/21-Cards-Trick/imgs/ReadMe-Images/MAIN.png"];
 const darkModeImages5 = ["https://praashoo7.github.io/21-Cards-Trick/imgs/ReadMe-Images/MAIN.png"];
+const lightModeImages6 = ["https://praashoo7.github.io/Collatz-Conjecture/imgs/ReadMe-Images/MAIN.png"];
+const darkModeImages6 = ["https://praashoo7.github.io/Collatz-Conjecture/imgs/ReadMe-Images/MAIN.png"];
 
 setupSlideshow('FFE1', lightModeImages1, darkModeImages1);
 setupSlideshow('FFE2', lightModeImages2, darkModeImages2);
 setupSlideshow('FFE3', lightModeImages3, darkModeImages3);
 setupSlideshow('FFE4', lightModeImages4, darkModeImages4);
 setupSlideshow('FFE5', lightModeImages5, darkModeImages5);
+setupSlideshow('FFE6', lightModeImages6, darkModeImages6);
