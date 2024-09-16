@@ -617,6 +617,8 @@ const lightModeImages5 = ["https://praashoo7.github.io/21-Cards-Trick/imgs/ReadM
 const darkModeImages5 = ["https://praashoo7.github.io/21-Cards-Trick/imgs/ReadMe-Images/MAIN.png"];
 const lightModeImages6 = ["https://praashoo7.github.io/Collatz-Conjecture/imgs/ReadMe-Images/MAIN.png"];
 const darkModeImages6 = ["https://praashoo7.github.io/Collatz-Conjecture/imgs/ReadMe-Images/MAIN.png"];
+const lightModeImages7 = ["https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-Green.png", "https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-Red.png", "https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-White.png", "https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-Purple.png"];
+const darkModeImages7 = ["https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-Green.png", "https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-Red.png", "https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-White.png", "https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-Purple.png"];
 
 setupSlideshow('FFE1', lightModeImages1, darkModeImages1);
 setupSlideshow('FFE2', lightModeImages2, darkModeImages2);
@@ -624,3 +626,4 @@ setupSlideshow('FFE3', lightModeImages3, darkModeImages3);
 setupSlideshow('FFE4', lightModeImages4, darkModeImages4);
 setupSlideshow('FFE5', lightModeImages5, darkModeImages5);
 setupSlideshow('FFE6', lightModeImages6, darkModeImages6);
+setupSlideshow('FFE7', lightModeImages7, darkModeImages7);
