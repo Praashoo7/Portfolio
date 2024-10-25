@@ -627,3 +627,81 @@ setupSlideshow('FFE4', lightModeImages4, darkModeImages4);
 setupSlideshow('FFE5', lightModeImages5, darkModeImages5);
 setupSlideshow('FFE6', lightModeImages6, darkModeImages6);
 setupSlideshow('FFE7', lightModeImages7, darkModeImages7);
+
+
+
+/*<!---------------------------------------------------------------------- HAPPY-DIWALI [It's here cause i like it!] ---------------------------------------------------------------------->*/
+
+const DIWALI_DATE = '2024-10-31';
+
+function handleDiwaliDisplay() {
+    const diwaliDate = new Date(DIWALI_DATE);
+    diwaliDate.setHours(0, 0, 0, 0);
+
+    const startDate = new Date(diwaliDate);
+    startDate.setDate(startDate.getDate() - 5);
+
+    const endDate = new Date(diwaliDate);
+    endDate.setDate(endDate.getDate() + 5);
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    if (today >= startDate && today <= endDate) {
+        document.getElementById('festiveCorner').style.display = 'block';
+        setTimeout(() => {
+            document.getElementById('diwali').style.opacity = 1;
+        }, 100);
+    } else {
+        document.getElementById('festiveCorner').style.display = 'none';
+        document.getElementById('diwali').style.opacity = 0;
+    }
+}
+
+document.getElementById('festiveCorner').addEventListener('click', function() {
+    document.getElementById('diwali1').style.display = 'block';
+    setTimeout(() => {
+        document.getElementById('diwali1').style.opacity = 1;
+    }, 100);
+    const lottiePlayer = document.getElementById('diwali1');
+    lottiePlayer.stop();
+    lottiePlayer.play();
+});
+
+handleDiwaliDisplay();
+
+
+
+/*<!---------------------------------------------------------------------- DIWALI-HOVER ---------------------------------------------------------------------->*/
+
+const hoverDiv = document.getElementById("festiveCorner");
+const targetDiv = document.getElementById("targetText");
+
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+if (!isTouchDevice) {
+  hoverDiv.addEventListener("mouseover", () => {
+    targetDiv.style.opacity = 0
+    setTimeout(() => {
+      targetDiv.innerHTML = 'Happy Diwali, Click for 🎇';
+      targetDiv.style.scale = 0.85
+      targetDiv.style.opacity = 1
+    }, 200);
+  });
+
+  hoverDiv.addEventListener("mouseout", () => {
+    targetDiv.style.opacity = 0
+    setTimeout(() => {
+      targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+      targetDiv.style.scale = 1
+      targetDiv.style.opacity = 1
+    }, 200);
+  });
+}
+
+// hoverDiv.addEventListener("mouseover", () => {
+//   targetDiv.style.animation = 'diIn 0.5s ease-in-out forwards';
+//   setTimeout(() => {
+//     targetDiv.style.animation = 'diOut 0.5s ease-in-out forwards';
+//   }, 1500);
+// });
