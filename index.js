@@ -688,7 +688,26 @@ if (!isTouchDevice) {
       targetDiv.style.opacity = 1
     }, 200);
   });
+} else {
+  hoverDiv.addEventListener("click", () => {
+    targetDiv.style.opacity = 0
+    setTimeout(() => {
+      targetDiv.innerHTML = 'Happy Diwali!';
+      targetDiv.style.scale = 0.85
+      targetDiv.style.opacity = 1
+    }, 200);
+    setTimeout(() => {
+      targetDiv.style.opacity = 0
+      setTimeout(() => {
+        targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+        targetDiv.style.scale = 1
+        targetDiv.style.opacity = 1
+      }, 200);
+    }, 2000);
+  });
+}
 
+if (!isTouchDevice) {
   hoverDiv.addEventListener("mouseout", () => {
     targetDiv.style.opacity = 0
     setTimeout(() => {
