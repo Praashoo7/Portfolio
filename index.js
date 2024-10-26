@@ -630,18 +630,18 @@ setupSlideshow('FFE7', lightModeImages7, darkModeImages7);
 
 
 
-/*<!---------------------------------------------------------------------- HAPPY-DIWALI [It's here cause i like it!] ---------------------------------------------------------------------->*/
+/*<!---------------------------------------------------------------------- FESTIVAL ---------------------------------------------------------------------->*/
 
-const DIWALI_DATE = '2024-10-31';
+const FESTIVAL_DATE = '2024-10-31';
 
-function handleDiwaliDisplay() {
-    const diwaliDate = new Date(DIWALI_DATE);
-    diwaliDate.setHours(0, 0, 0, 0);
+function handleFestivalDisplay() {
+    const festivalDate = new Date(FESTIVAL_DATE);
+    festivalDate.setHours(0, 0, 0, 0);
 
-    const startDate = new Date(diwaliDate);
+    const startDate = new Date(festivalDate);
     startDate.setDate(startDate.getDate() - 5);
 
-    const endDate = new Date(diwaliDate);
+    const endDate = new Date(festivalDate);
     endDate.setDate(endDate.getDate() + 5);
 
     const today = new Date();
@@ -650,29 +650,29 @@ function handleDiwaliDisplay() {
     if (today >= startDate && today <= endDate) {
         document.getElementById('festiveCorner').style.display = 'block';
         setTimeout(() => {
-            document.getElementById('diwali').style.opacity = 1;
+            document.getElementById('festival').style.opacity = 1;
         }, 100);
     } else {
         document.getElementById('festiveCorner').style.display = 'none';
-        document.getElementById('diwali').style.opacity = 0;
+        document.getElementById('festival').style.opacity = 0;
     }
 }
 
 document.getElementById('festiveCorner').addEventListener('click', function() {
-    document.getElementById('diwali1').style.display = 'block';
+    document.getElementById('festival1').style.display = 'block';
     setTimeout(() => {
-        document.getElementById('diwali1').style.opacity = 1;
+        document.getElementById('festival1').style.opacity = 1;
     }, 100);
-    const lottiePlayer = document.getElementById('diwali1');
+    const lottiePlayer = document.getElementById('festival1');
     lottiePlayer.stop();
     lottiePlayer.play();
 });
 
-handleDiwaliDisplay();
+handleFestivalDisplay();
 
 
 
-/*<!---------------------------------------------------------------------- DIWALI-HOVER ---------------------------------------------------------------------->*/
+/*<!---------------------------------------------------------------------- FESTIVAL-HOVER ---------------------------------------------------------------------->*/
 
 const hoverDiv = document.getElementById("festiveCorner");
 const targetDiv = document.getElementById("targetText");
