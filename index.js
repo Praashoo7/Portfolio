@@ -703,7 +703,7 @@ if (!isTouchDevice) {
         targetDiv.style.scale = 1
         targetDiv.style.opacity = 1
       }, 200);
-    }, 2000);
+    }, 4000);
   });
 }
 
