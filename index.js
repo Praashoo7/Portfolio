@@ -642,7 +642,7 @@ function handleFestivalDisplay() {
     startDate.setDate(startDate.getDate() - 5);
 
     const endDate = new Date(festivalDate);
-    endDate.setDate(endDate.getDate() + 5);
+    endDate.setDate(endDate.getDate() + 6);
 
     const today = new Date();
     today.setHours(0, 0, 0, 0);
