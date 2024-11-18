@@ -611,8 +611,8 @@ const lightModeImages2 = ["https://github.com/Praashoo7/Photo-Gallery-React/blob
 const darkModeImages2 = ["https://github.com/Praashoo7/Photo-Gallery-React/blob/main/public/ReadMe-Files/ReadMe_Image1R.png?raw=true", "https://github.com/Praashoo7/Photo-Gallery-React/blob/main/public/ReadMe-Files/ReadMe_Image2R.png?raw=true"];
 const lightModeImages3 = ["https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/Color-Blindness-Simulator.png", "https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/ButtonB.png"];
 const darkModeImages3 = ["https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/Color-Blindness-Simulator.png", "https://praashoo7.github.io/Color-Blindness-Simulator/ReadMe-Images/ButtonB.png"];
-const lightModeImages4 = ["https://praashoo7.github.io/Web/ReadMe-Images/1P.png", "https://praashoo7.github.io/Web/ReadMe-Images/2P.png", "https://praashoo7.github.io/Web/ReadMe-Images/1G.png", "https://praashoo7.github.io/Web/ReadMe-Images/2G.png"];
-const darkModeImages4 = ["https://praashoo7.github.io/Web/ReadMe-Images/1PD.png", "https://praashoo7.github.io/Web/ReadMe-Images/2PD.png", "https://praashoo7.github.io/Web/ReadMe-Images/1GD.png", "https://praashoo7.github.io/Web/ReadMe-Images/2GD.png"];
+const lightModeImages4 = ["https://praashoo7.github.io/A-Photography-Website/ReadMe-Images/1P.png", "https://praashoo7.github.io/A-Photography-Website/ReadMe-Images/2P.png", "https://praashoo7.github.io/A-Photography-Website/ReadMe-Images/1G.png", "https://praashoo7.github.io/A-Photography-Website/ReadMe-Images/2G.png"];
+const darkModeImages4 = ["https://praashoo7.github.io/A-Photography-Website/ReadMe-Images/1PD.png", "https://praashoo7.github.io/A-Photography-Website/ReadMe-Images/2PD.png", "https://praashoo7.github.io/A-Photography-Website/ReadMe-Images/1GD.png", "https://praashoo7.github.io/A-Photography-Website/ReadMe-Images/2GD.png"];
 const lightModeImages5 = ["https://praashoo7.github.io/21-Cards-Trick/imgs/ReadMe-Images/MAIN.png"];
 const darkModeImages5 = ["https://praashoo7.github.io/21-Cards-Trick/imgs/ReadMe-Images/MAIN.png"];
 const lightModeImages6 = ["https://praashoo7.github.io/Collatz-Conjecture/imgs/ReadMe-Images/MAIN.png"];
@@ -632,91 +632,91 @@ setupSlideshow('FFE7', lightModeImages7, darkModeImages7);
 
 /*<!---------------------------------------------------------------------- FESTIVAL ---------------------------------------------------------------------->*/
 
-const FESTIVAL_DATE = '2024-10-31';
+// const FESTIVAL_DATE = '2024-10-31';
 
-function handleFestivalDisplay() {
-    const festivalDate = new Date(FESTIVAL_DATE);
-    festivalDate.setHours(0, 0, 0, 0);
+// function handleFestivalDisplay() {
+//     const festivalDate = new Date(FESTIVAL_DATE);
+//     festivalDate.setHours(0, 0, 0, 0);
 
-    const startDate = new Date(festivalDate);
-    startDate.setDate(startDate.getDate() - 5);
+//     const startDate = new Date(festivalDate);
+//     startDate.setDate(startDate.getDate() - 5);
 
-    const endDate = new Date(festivalDate);
-    endDate.setDate(endDate.getDate() + 6);
+//     const endDate = new Date(festivalDate);
+//     endDate.setDate(endDate.getDate() + 6);
 
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+//     const today = new Date();
+//     today.setHours(0, 0, 0, 0);
 
-    if (today >= startDate && today <= endDate) {
-        document.getElementById('festiveCorner').style.display = 'block';
-        setTimeout(() => {
-            document.getElementById('festival').style.opacity = 1;
-        }, 100);
-    } else {
-        document.getElementById('festiveCorner').style.display = 'none';
-        document.getElementById('festival').style.opacity = 0;
-    }
-}
+//     if (today >= startDate && today <= endDate) {
+//         document.getElementById('festiveCorner').style.display = 'block';
+//         setTimeout(() => {
+//             document.getElementById('festival').style.opacity = 1;
+//         }, 100);
+//     } else {
+//         document.getElementById('festiveCorner').style.display = 'none';
+//         document.getElementById('festival').style.opacity = 0;
+//     }
+// }
 
-document.getElementById('festiveCorner').addEventListener('click', function() {
-    document.getElementById('festival1').style.display = 'block';
-    setTimeout(() => {
-        document.getElementById('festival1').style.opacity = 1;
-    }, 100);
-    const lottiePlayer = document.getElementById('festival1');
-    lottiePlayer.stop();
-    lottiePlayer.play();
-});
+// document.getElementById('festiveCorner').addEventListener('click', function() {
+//     document.getElementById('festival1').style.display = 'block';
+//     setTimeout(() => {
+//         document.getElementById('festival1').style.opacity = 1;
+//     }, 100);
+//     const lottiePlayer = document.getElementById('festival1');
+//     lottiePlayer.stop();
+//     lottiePlayer.play();
+// });
 
-handleFestivalDisplay();
+// handleFestivalDisplay();
 
 
 
-/*<!---------------------------------------------------------------------- FESTIVAL-HOVER ---------------------------------------------------------------------->*/
+// /*<!---------------------------------------------------------------------- FESTIVAL-HOVER ---------------------------------------------------------------------->*/
 
-const hoverDiv = document.getElementById("festiveCorner");
-const targetDiv = document.getElementById("targetText");
+// const hoverDiv = document.getElementById("festiveCorner");
+// const targetDiv = document.getElementById("targetText");
 
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+// const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-if (!isTouchDevice) {
-  hoverDiv.addEventListener("mouseover", () => {
-    targetDiv.style.opacity = 0
-    setTimeout(() => {
-      targetDiv.innerHTML = 'Happy Diwali, Click for 🎇';
-      targetDiv.style.scale = 0.85
-      targetDiv.style.opacity = 1
-    }, 200);
-  });
-} else {
-  hoverDiv.addEventListener("click", () => {
-    targetDiv.style.opacity = 0
-    setTimeout(() => {
-      targetDiv.innerHTML = 'Happy Diwali!';
-      targetDiv.style.scale = 0.85
-      targetDiv.style.opacity = 1
-    }, 200);
-    setTimeout(() => {
-      targetDiv.style.opacity = 0
-      setTimeout(() => {
-        targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
-        targetDiv.style.scale = 1
-        targetDiv.style.opacity = 1
-      }, 200);
-    }, 4000);
-  });
-}
+// if (!isTouchDevice) {
+//   hoverDiv.addEventListener("mouseover", () => {
+//     targetDiv.style.opacity = 0
+//     setTimeout(() => {
+//       targetDiv.innerHTML = 'Happy Diwali, Click for 🎇';
+//       targetDiv.style.scale = 0.85
+//       targetDiv.style.opacity = 1
+//     }, 200);
+//   });
+// } else {
+//   hoverDiv.addEventListener("click", () => {
+//     targetDiv.style.opacity = 0
+//     setTimeout(() => {
+//       targetDiv.innerHTML = 'Happy Diwali!';
+//       targetDiv.style.scale = 0.85
+//       targetDiv.style.opacity = 1
+//     }, 200);
+//     setTimeout(() => {
+//       targetDiv.style.opacity = 0
+//       setTimeout(() => {
+//         targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+//         targetDiv.style.scale = 1
+//         targetDiv.style.opacity = 1
+//       }, 200);
+//     }, 4000);
+//   });
+// }
 
-if (!isTouchDevice) {
-  hoverDiv.addEventListener("mouseout", () => {
-    targetDiv.style.opacity = 0
-    setTimeout(() => {
-      targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
-      targetDiv.style.scale = 1
-      targetDiv.style.opacity = 1
-    }, 200);
-  });
-}
+// if (!isTouchDevice) {
+//   hoverDiv.addEventListener("mouseout", () => {
+//     targetDiv.style.opacity = 0
+//     setTimeout(() => {
+//       targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+//       targetDiv.style.scale = 1
+//       targetDiv.style.opacity = 1
+//     }, 200);
+//   });
+// }
 
 // hoverDiv.addEventListener("mouseover", () => {
 //   targetDiv.style.animation = 'diIn 0.5s ease-in-out forwards';
