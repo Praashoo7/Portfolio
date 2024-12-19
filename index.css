@@ -1457,7 +1457,7 @@ transition: 1s ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 @media (max-width: 425px)  {
   .reveal00 {
-    transition: 0s ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: 0.2s ease, scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
   }
 }
 .reveal00.active{
@@ -1735,20 +1735,42 @@ color: red;
 /* festival */
 
 .festiveCorner{
-  display: none;
+  position: fixed;
+  display: block;
+  width: 5em;
+  overflow: hidden;
+  height: 3.4em;
   cursor: pointer;
+  z-index: 9999;
+  border-radius: 8px;
 }
-.festival, .festival1{
-  width: 45px; height: 45px; opacity: 0; position: fixed; top: 1.2em; left: 0.55em; z-index: 9999; transition: all 0.4s ease-in-out;
+.festival, .festival1, .festival2{
+  width: 45px; height: 45px; opacity: 0; position: relative; top: 0.6em; left: 0.25em; z-index: 9999; transition: all 0.4s ease-in-out;
+}
+.festival2{
+  opacity: 1;
+  top: -2em;
+  left: 0;
+  height: max-content;
+  z-index: 999999;
+  scale: 1.85;
 }
 .festival1{
   display: none;
   opacity: 0;
-  z-index: 99999;
-  width: 100px; height: 70px;
-  top: 0;
-  left: 0;
+  width: max-content; height: 70px;
+  top: -3.8em;
+  margin-left: 1em;
+  z-index: 999999;
 }
+/* .wrapDiv{
+  position: absolute;
+  width: max-content;
+  height: 3.4em;
+  overflow: hidden;
+  z-index: 99999;
+  border-radius: 10px;
+} */
 #targetText{
   transition: all 0.2s ease-in-out;
 }
@@ -1775,8 +1797,8 @@ color: red;
   font-size: 0.85em;
   transition: all 0.25s ease-in-out;
   z-index: 88;
- } */
- /* @keyframes diIn {
+ }
+ @keyframes diIn {
     0%{
       transform: translateX(2px) translateY(0px);
     }
@@ -1805,16 +1827,16 @@ color: red;
   }
 } */
 
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) {
   .festival{
-    width: 35px; height: 35px; top: 1.7em; left: 0.65em;
+    width: 35px; height: 35px; top: 1.15em; left: 0.5em;
   }
-}
-@media only screen and (max-width: 350px) {
-  .festival{
-    width: 25px; height: 25px; top: 2.35em; left: 0.8em;
+  .festival1{
+    height: 60px;
+    top: -2.8em;
+    margin-left: 0.85em;
   }
-}
+} */
 
 
 /* SMALL-DEVICE */
@@ -1844,7 +1866,7 @@ color: red;
 }
 
 @media only screen and (max-width: 279px) {
-  header, .m1, .m2, .m3, .m4, .wide-cc2, .revealM, .festival{
+  header, .m1, .m2, .m3, .m4, .wide-cc2, .revealM, .festival, .festival2{
       display: none;
   }
   body{

@@ -632,95 +632,141 @@ setupSlideshow('FFE7', lightModeImages7, darkModeImages7);
 
 /*<!---------------------------------------------------------------------- FESTIVAL ---------------------------------------------------------------------->*/
 
-// const FESTIVAL_DATE = '2024-10-31';
+const FESTIVAL_DATE = '2024-12-24';
 
-// function handleFestivalDisplay() {
-//     const festivalDate = new Date(FESTIVAL_DATE);
-//     festivalDate.setHours(0, 0, 0, 0);
+function handleFestivalDisplay() {
+    const festivalDate = new Date(FESTIVAL_DATE);
+    festivalDate.setHours(0, 0, 0, 0);
 
-//     const startDate = new Date(festivalDate);
-//     startDate.setDate(startDate.getDate() - 5);
+    const startDate = new Date(festivalDate);
+    startDate.setDate(startDate.getDate() - 5);
 
-//     const endDate = new Date(festivalDate);
-//     endDate.setDate(endDate.getDate() + 6);
+    const endDate = new Date(festivalDate);
+    endDate.setDate(endDate.getDate() + 6);
 
-//     const today = new Date();
-//     today.setHours(0, 0, 0, 0);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
 
-//     if (today >= startDate && today <= endDate) {
-//         document.getElementById('festiveCorner').style.display = 'block';
-//         setTimeout(() => {
-//             document.getElementById('festival').style.opacity = 1;
-//         }, 100);
-//     } else {
-//         document.getElementById('festiveCorner').style.display = 'none';
-//         document.getElementById('festival').style.opacity = 0;
-//     }
-// }
+    if (today >= startDate && today <= endDate) {
+        document.getElementById('festiveCorner').style.display = 'block';
+        setTimeout(() => {
+            document.getElementById('festival').style.opacity = 1;
+        }, 400);
+    } else {
+        document.getElementById('festiveCorner').style.display = 'none';
+        document.getElementById('festival').style.opacity = 0;
+    }
+}
 
-// document.getElementById('festiveCorner').addEventListener('click', function() {
-//     document.getElementById('festival1').style.display = 'block';
-//     setTimeout(() => {
-//         document.getElementById('festival1').style.opacity = 1;
-//     }, 100);
-//     const lottiePlayer = document.getElementById('festival1');
-//     lottiePlayer.stop();
-//     lottiePlayer.play();
-// });
+let isClicked = false;
+let isFestiveClicked = false;
 
-// handleFestivalDisplay();
+document.getElementById('festiveCorner').addEventListener('click', function() {
+    if(isFestiveClicked == true){
+      isClicked = false
+      isFestiveClicked = false;
+    } else {
+      isClicked = true
+    }
+    document.getElementById('festival1').style.display = 'block';
+    setTimeout(() => {
+        document.getElementById('festival1').style.opacity = 1;
+    }, 100);
+    const lottiePlayer = document.getElementById('festival1');
+    lottiePlayer.stop();
+    // setTimeout(() => {
+    //   document.getElementById('festival1').style.opacity = 0;
+    //   setTimeout(() => {
+    //       document.getElementById('festival1').style.display = 'none';
+    //   }, 200);
+    // }, 1000);
+    lottiePlayer.play();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const festiveCorner = document.getElementById("festiveCorner");
+  if (festiveCorner) {
+    handleFestivalDisplay()
+  }
+});
+
+
+document.getElementById('festival1').addEventListener('click', function() {
+  isFestiveClicked = true
+  window.open("festive/Gift.html")
+  document.getElementById('festival1').style.opacity = 0;
+  setTimeout(() => {
+      document.getElementById('festival1').style.display = 'none';
+  }, 400);
+})
 
 
 
 // /*<!---------------------------------------------------------------------- FESTIVAL-HOVER ---------------------------------------------------------------------->*/
 
-// const hoverDiv = document.getElementById("festiveCorner");
-// const targetDiv = document.getElementById("targetText");
+const hoverDiv = document.getElementById("festiveCorner");
+const targetDiv = document.getElementById("targetText");
 
-// const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-// if (!isTouchDevice) {
-//   hoverDiv.addEventListener("mouseover", () => {
-//     targetDiv.style.opacity = 0
-//     setTimeout(() => {
-//       targetDiv.innerHTML = 'Happy Diwali, Click for 🎇';
-//       targetDiv.style.scale = 0.85
-//       targetDiv.style.opacity = 1
-//     }, 200);
-//   });
-// } else {
-//   hoverDiv.addEventListener("click", () => {
-//     targetDiv.style.opacity = 0
-//     setTimeout(() => {
-//       targetDiv.innerHTML = 'Happy Diwali!';
-//       targetDiv.style.scale = 0.85
-//       targetDiv.style.opacity = 1
-//     }, 200);
-//     setTimeout(() => {
-//       targetDiv.style.opacity = 0
-//       setTimeout(() => {
-//         targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
-//         targetDiv.style.scale = 1
-//         targetDiv.style.opacity = 1
-//       }, 200);
-//     }, 4000);
-//   });
-// }
+if (!isTouchDevice) {
+  hoverDiv.addEventListener("mouseover", () => {
+    if(isClicked == false){
+      targetDiv.style.opacity = 0
+      setTimeout(() => {
+        targetDiv.innerHTML = 'Merry Christmas! Click for a Gift🎁';
+        targetDiv.style.scale = 0.85
+        targetDiv.style.opacity = 1
+      }, 200);
+    } else {
+      targetDiv.style.opacity = 0
+      setTimeout(() => {
+        targetDiv.innerHTML = 'Click the Gift to Open!';
+        targetDiv.style.scale = 0.85
+        targetDiv.style.opacity = 1
+      }, 200);
+    }
+  });
+} else {
+  hoverDiv.addEventListener("click", () => {
+    if(isClicked == true){
+      targetDiv.style.opacity = 0
+      setTimeout(() => {
+        targetDiv.innerHTML = 'Merry Christmas!';
+        targetDiv.style.scale = 0.85
+        targetDiv.style.opacity = 1
+        setTimeout(() => {
+          targetDiv.innerHTML = 'Click the Gift to open it!';
+          targetDiv.style.scale = 0.85
+          targetDiv.style.opacity = 1
+        }, 1500);
+      }, 200);
+      setTimeout(() => {
+        targetDiv.style.opacity = 0
+        setTimeout(() => {
+          targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+          targetDiv.style.scale = 1
+          targetDiv.style.opacity = 1
+        }, 200);
+      }, 4000);
+    }
+  });
+}
 
-// if (!isTouchDevice) {
-//   hoverDiv.addEventListener("mouseout", () => {
-//     targetDiv.style.opacity = 0
-//     setTimeout(() => {
-//       targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
-//       targetDiv.style.scale = 1
-//       targetDiv.style.opacity = 1
-//     }, 200);
-//   });
-// }
+if (!isTouchDevice) {
+  hoverDiv.addEventListener("mouseout", () => {
+    targetDiv.style.opacity = 0
+    setTimeout(() => {
+      targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+      targetDiv.style.scale = 1
+      targetDiv.style.opacity = 1
+    }, 200);
+  });
+}
 
-// hoverDiv.addEventListener("mouseover", () => {
-//   targetDiv.style.animation = 'diIn 0.5s ease-in-out forwards';
-//   setTimeout(() => {
-//     targetDiv.style.animation = 'diOut 0.5s ease-in-out forwards';
-//   }, 1500);
-// });
+hoverDiv.addEventListener("mouseover", () => {
+  targetDiv.style.animation = 'diIn 0.5s ease-in-out forwards';
+  setTimeout(() => {
+    targetDiv.style.animation = 'diOut 0.5s ease-in-out forwards';
+  }, 1500);
+});
