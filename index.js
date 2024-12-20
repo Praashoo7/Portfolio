@@ -632,7 +632,7 @@ setupSlideshow('FFE7', lightModeImages7, darkModeImages7);
 
 /*<!---------------------------------------------------------------------- FESTIVAL ---------------------------------------------------------------------->*/
 
-const FESTIVAL_DATE = '2024-12-24';
+const FESTIVAL_DATE = '2024-12-25';
 
 function handleFestivalDisplay() {
     const festivalDate = new Date(FESTIVAL_DATE);
