@@ -1734,7 +1734,7 @@ color: red;
 
 /* festival */
 
-.festiveCorner{
+.festiveCornerDiwali, .festiveCorner{
   position: fixed;
   display: block;
   width: 5em;
@@ -1744,10 +1744,10 @@ color: red;
   z-index: 9999;
   border-radius: 8px;
 }
-.festival, .festival1, .festival2{
+.festivalDiwali, .festivalDiwali1, .festivalDiwali2, .festival, .festival1, .festival2{
   width: 45px; height: 45px; opacity: 0; position: relative; top: 0.6em; left: 0.25em; z-index: 9999; transition: all 0.4s ease-in-out;
 }
-.festival2{
+.festivalDiwali2, .festival2{
   opacity: 1;
   top: -2em;
   left: 0;
@@ -1755,13 +1755,16 @@ color: red;
   z-index: 999999;
   scale: 1.85;
 }
-.festival1{
+.festivalDiwali1, .festival1{
   display: none;
   opacity: 0;
   width: max-content; height: 70px;
   top: -3.8em;
   margin-left: 1em;
   z-index: 999999;
+}
+.festivalDiwali1{
+  margin-left: 0;
 }
 /* .wrapDiv{
   position: absolute;

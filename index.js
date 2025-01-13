@@ -633,139 +633,116 @@ setupSlideshow('FFE8', lightModeImages8, darkModeImages8);
 
 
 
-/*<!---------------------------------------------------------------------- FESTIVAL ---------------------------------------------------------------------->*/
-
-// const FESTIVAL_DATE = '2024-12-25';
-
-// function handleFestivalDisplay() {
-//     const festivalDate = new Date(FESTIVAL_DATE);
-//     festivalDate.setHours(0, 0, 0, 0);
-
-//     const startDate = new Date(festivalDate);
-//     startDate.setDate(startDate.getDate() - 5);
-
-//     const endDate = new Date(festivalDate);
-//     endDate.setDate(endDate.getDate() + 6);
-
-//     const today = new Date();
-//     today.setHours(0, 0, 0, 0);
-
-//     if (today >= startDate && today <= endDate) {
-//         document.getElementById('festiveCorner').style.display = 'block';
-//         setTimeout(() => {
-//             document.getElementById('festival').style.opacity = 1;
-//         }, 400);
-//     } else {
-//         document.getElementById('festiveCorner').style.display = 'none';
-//         document.getElementById('festival').style.opacity = 0;
-//     }
-// }
-
-// let isClicked = false;
-// let isFestiveClicked = false;
-
-// document.getElementById('festiveCorner').addEventListener('click', function() {
-//     if(isFestiveClicked == true){
-//       isClicked = false
-//       isFestiveClicked = false;
-//     } else {
-//       isClicked = true
-//     }
-//     document.getElementById('festival1').style.display = 'block';
-//     setTimeout(() => {
-//         document.getElementById('festival1').style.opacity = 1;
-//     }, 100);
-//     const lottiePlayer = document.getElementById('festival1');
-//     lottiePlayer.stop();
-//     // setTimeout(() => {
-//     //   document.getElementById('festival1').style.opacity = 0;
-//     //   setTimeout(() => {
-//     //       document.getElementById('festival1').style.display = 'none';
-//     //   }, 200);
-//     // }, 1000);
-//     lottiePlayer.play();
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const festiveCorner = document.getElementById("festiveCorner");
-//   if (festiveCorner) {
-//     handleFestivalDisplay()
-//   }
-// });
-
-
-// document.getElementById('festival1').addEventListener('click', function() {
-//   isFestiveClicked = true
-//   window.open("festive/Gift.html")
-//   document.getElementById('festival1').style.opacity = 0;
-//   setTimeout(() => {
-//       document.getElementById('festival1').style.display = 'none';
-//   }, 400);
-// })
 
 
 
-// /*<!---------------------------------------------------------------------- FESTIVAL-HOVER ---------------------------------------------------------------------->*/
 
-// const hoverDiv = document.getElementById("festiveCorner");
-// const targetDiv = document.getElementById("targetText");
 
-// const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+/* FAVORITES  */
+/* ---------- DIWALI ---------- */
 
-// if (!isTouchDevice) {
-//   hoverDiv.addEventListener("mouseover", () => {
-//     if(isClicked == false){
-//       targetDiv.style.opacity = 0
-//       setTimeout(() => {
-//         targetDiv.innerHTML = 'Merry Christmas! Click for a Gift🎁';
-//         targetDiv.style.scale = 0.85
-//         targetDiv.style.opacity = 1
-//       }, 200);
-//     } else {
-//       targetDiv.style.opacity = 0
-//       setTimeout(() => {
-//         targetDiv.innerHTML = 'Click the Gift to Open!';
-//         targetDiv.style.scale = 0.85
-//         targetDiv.style.opacity = 1
-//       }, 200);
-//     }
-//   });
-// } else {
-//   hoverDiv.addEventListener("click", () => {
-//     if(isClicked == true){
-//       targetDiv.style.opacity = 0
-//       setTimeout(() => {
-//         targetDiv.innerHTML = 'Merry Christmas!';
-//         targetDiv.style.scale = 0.85
-//         targetDiv.style.opacity = 1
-//         setTimeout(() => {
-//           targetDiv.innerHTML = 'Click the Gift to open it!';
-//           targetDiv.style.scale = 0.85
-//           targetDiv.style.opacity = 1
-//         }, 1500);
-//       }, 200);
-//       setTimeout(() => {
-//         targetDiv.style.opacity = 0
-//         setTimeout(() => {
-//           targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
-//           targetDiv.style.scale = 1
-//           targetDiv.style.opacity = 1
-//         }, 200);
-//       }, 4000);
-//     }
-//   });
-// }
+const FESTIVAL_DATE_DIWALI = '2024-1-13';
 
-// if (!isTouchDevice) {
-//   hoverDiv.addEventListener("mouseout", () => {
-//     targetDiv.style.opacity = 0
-//     setTimeout(() => {
-//       targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
-//       targetDiv.style.scale = 1
-//       targetDiv.style.opacity = 1
-//     }, 200);
-//   });
-// }
+const festivalDateDiwali = new Date(FESTIVAL_DATE_DIWALI);
+festivalDateDiwali.setHours(0, 0, 0, 0);
+const startDateDiwali = new Date(festivalDateDiwali);
+startDateDiwali.setDate(startDateDiwali.getDate() - 5);
+const endDateDiwali = new Date(festivalDateDiwali);
+endDateDiwali.setDate(endDateDiwali.getDate() + 6);
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+
+function handleFestivalDisplayDiwali() {
+
+    if (today >= startDateDiwali && today <= endDateDiwali) {
+
+        const newDiv = document.createElement('div');
+        newDiv.className = 'festiveCornerDiwali';
+        newDiv.id = 'festiveCornerDiwali';
+        newDiv.innerHTML = `
+            <!-- LOTTIE ANIMATIONS FROM [lottiefiles.com] BY [JAStudio] & [Emily Zhou]
+            LINKS
+            [https://lottiefiles.com/free-animation/diwali-diya-MeYAZQYH9N],
+            [https://lottiefiles.com/free-animation/fireworks-Qa0DxeLqfw] 
+            -->
+          <dotlottie-player class="festivalDiwali" id="festivalDiwali" src="https://lottie.host/1ce3e59b-23ee-4b78-8185-0c8ee6464354/RAvsohVLVA.json" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+          <dotlottie-player class="festivalDiwali1" id="festivalDiwali1" src="https://lottie.host/f100edcd-c4b1-4e10-a808-468437e7ae79/3JEqqS12Qd.json" background="transparent" speed="1" direction="1" playMode="normal" loop="false" autoplay="false"></dotlottie-player>
+        `;
+
+        document.body.insertBefore(newDiv, document.body.firstChild);
+
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs';
+        script.type = 'module';
+        document.body.appendChild(script);
+
+        document.getElementById('festiveCornerDiwali').style.display = 'block';
+        setTimeout(() => {
+            document.getElementById('festivalDiwali').style.opacity = 1;
+        }, 100);
+
+        document.getElementById('festiveCornerDiwali').addEventListener('click', function() {
+          document.getElementById('festivalDiwali1').style.display = 'block';
+          setTimeout(() => {
+              document.getElementById('festivalDiwali1').style.opacity = 1;
+          }, 100);
+          const lottiePlayer = document.getElementById('festivalDiwali1');
+          lottiePlayer.stop();
+          lottiePlayer.play();
+        });
+    }
+}
+
+handleFestivalDisplayDiwali();
+
+
+
+/* ---------- DIWALI-HOVER ---------- */
+
+const hoverDiv = document.getElementById("festiveCornerDiwali");
+const targetDiv = document.getElementById("targetText");
+
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+if (!isTouchDevice && today >= startDateDiwali && today <= endDateDiwali) {
+  hoverDiv.addEventListener("mouseover", () => {
+    targetDiv.style.opacity = 0
+    setTimeout(() => {
+      targetDiv.innerHTML = 'Happy Diwali, Click for 🎇';
+      targetDiv.style.scale = 0.85
+      targetDiv.style.opacity = 1
+    }, 200);
+  });
+} else if(isTouchDevice && today >= startDateDiwali && today <= endDateDiwali) {
+  hoverDiv.addEventListener("click", () => {
+    targetDiv.style.opacity = 0
+    setTimeout(() => {
+      targetDiv.innerHTML = 'Happy Diwali!';
+      targetDiv.style.scale = 0.85
+      targetDiv.style.opacity = 1
+    }, 200);
+    setTimeout(() => {
+      targetDiv.style.opacity = 0
+      setTimeout(() => {
+        targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+        targetDiv.style.scale = 1
+        targetDiv.style.opacity = 1
+      }, 200);
+    }, 4000);
+  });
+}
+
+if (!isTouchDevice && today >= startDateDiwali && today <= endDateDiwali) {
+  hoverDiv.addEventListener("mouseout", () => {
+    targetDiv.style.opacity = 0
+    setTimeout(() => {
+      targetDiv.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+      targetDiv.style.scale = 1
+      targetDiv.style.opacity = 1
+    }, 200);
+  });
+}
 
 // hoverDiv.addEventListener("mouseover", () => {
 //   targetDiv.style.animation = 'diIn 0.5s ease-in-out forwards';
@@ -773,3 +750,163 @@ setupSlideshow('FFE8', lightModeImages8, darkModeImages8);
 //     targetDiv.style.animation = 'diOut 0.5s ease-in-out forwards';
 //   }, 1500);
 // });
+
+
+
+/* ---------- CHRISTMAS ---------- */
+
+const FESTIVAL_DATE = new Date().getFullYear() +'-12-25';
+
+const festivalDate = new Date(FESTIVAL_DATE);
+festivalDate.setHours(0, 0, 0, 0);
+const startDate = new Date(festivalDate);
+startDate.setDate(startDate.getDate() - 5);
+const endDate = new Date(festivalDate);
+endDate.setDate(endDate.getDate() + 6);
+
+
+function handleFestivalDisplay() {
+
+    if (today >= startDate && today <= endDate) {
+
+        const newDiv = document.createElement('div');
+        newDiv.className = 'festiveCorner';
+        newDiv.id = 'festiveCorner';
+        newDiv.innerHTML = `
+          <!-- LOTTIE ANIMATIONS FROM [lottiefiles.com]
+          LINKS 
+          [https://lottiefiles.com/free-animation/christmas-tenten-wZYnynwpdY - CHRISTMAS_TREE], 
+          [https://lottiefiles.com/free-animation/gifts-flying-c1cMVXiII6 - GIFTS], 
+          [https://lottiefiles.com/free-animation/snowglobe-after-jignesh-gajjar-D2Eb27C2bt - SNOW_EXTRACTED_FROM_THIS_ANIMATION]
+          -->
+          <!-- https://lottie.host/d7de9937-2dc4-49ef-a354-b2459bbed38e/pQIyvmw9xw.json COMMENT_OUT -->
+          <dotlottie-player class="festival" id="festival" src="https://lottie.host/497c1743-1533-47ad-b6d8-9ed6ebd16b3b/4l3EhpIdKn.json" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+          <dotlottie-player class="festival2" id="festival2" src="https://lottie.host/3b4dafa1-ffa4-4003-a728-f88542e53074/VAs5OqFEdZ.lottie" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+          <dotlottie-player class="festival1" id="festival1" src="https://lottie.host/5f7afe43-996b-4b66-a1ce-a0844498d1e5/8WvgvqL0MM.lottie" background="transparent" speed="1" direction="1" playMode="normal" loop="false" autoplay="false"></dotlottie-player>
+        `;
+
+        document.body.insertBefore(newDiv, document.body.firstChild);
+
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs';
+        script.type = 'module';
+        document.body.appendChild(script);
+
+        document.getElementById('festiveCorner').style.display = 'block';
+        setTimeout(() => {
+            document.getElementById('festival').style.opacity = 1;
+        }, 400);
+
+        document.getElementById('festival1').addEventListener('click', function() {
+          isFestiveClicked = true
+          window.open("https://anothermetosee.github.io/Festive/index.html")
+          document.getElementById('festival1').style.opacity = 0;
+          setTimeout(() => {
+              document.getElementById('festival1').style.display = 'none';
+          }, 400);
+        })
+
+    }
+}
+
+handleFestivalDisplay()
+
+
+
+/* ---------- CHRISTMAST-HOVER ---------- */
+
+const hoverDiv1 = document.getElementById("festiveCorner");
+const targetDiv1 = document.getElementById("targetText");
+
+const isTouchDevice1 = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+let isClicked = false;
+let isFestiveClicked = false;
+
+if(today >= startDate && today <= endDate){
+  document.getElementById('festiveCorner').addEventListener('click', function() {
+    if(isFestiveClicked == true){
+      isClicked = false
+      isFestiveClicked = false;
+    } else {
+      isClicked = true
+    }
+    document.getElementById('festival1').style.display = 'block';
+    setTimeout(() => {
+        document.getElementById('festival1').style.opacity = 1;
+    }, 100);
+    const lottiePlayer = document.getElementById('festival1');
+    lottiePlayer.stop();
+    // setTimeout(() => {
+    //   document.getElementById('festival1').style.opacity = 0;
+    //   setTimeout(() => {
+    //       document.getElementById('festival1').style.display = 'none';
+    //   }, 200);
+    // }, 1000);
+    lottiePlayer.play();
+  });
+}
+
+
+if (!isTouchDevice1 && today >= startDate && today <= endDate) {
+
+  hoverDiv1.addEventListener("mouseover", () => {
+    if(isClicked == false){
+      targetDiv1.style.opacity = 0
+      setTimeout(() => {
+        targetDiv1.innerHTML = 'Merry Christmas! Click for a Gift🎁';
+        targetDiv1.style.scale = 0.85
+        targetDiv1.style.opacity = 1
+      }, 200);
+    } else {
+      targetDiv1.style.opacity = 0
+      setTimeout(() => {
+        targetDiv1.innerHTML = 'Click the Gift to Open!';
+        targetDiv1.style.scale = 0.85
+        targetDiv1.style.opacity = 1
+      }, 200);
+    }
+  });
+
+} else if(isTouchDevice1 && today >= startDate && today <= endDate) {
+  hoverDiv1.addEventListener("click", () => {
+    if(isClicked == true){
+      targetDiv1.style.opacity = 0
+      setTimeout(() => {
+        targetDiv1.innerHTML = 'Merry Christmas!';
+        targetDiv1.style.scale = 0.85
+        targetDiv1.style.opacity = 1
+        setTimeout(() => {
+          targetDiv1.innerHTML = 'Click the Gift to open it!';
+          targetDiv1.style.scale = 0.85
+          targetDiv1.style.opacity = 1
+        }, 1500);
+      }, 200);
+      setTimeout(() => {
+        targetDiv1.style.opacity = 0
+        setTimeout(() => {
+          targetDiv1.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+          targetDiv1.style.scale = 1
+          targetDiv1.style.opacity = 1
+        }, 200);
+      }, 4000);
+    }
+  });
+}
+
+if (!isTouchDevice1 && today >= startDate && today <= endDate) {
+  hoverDiv1.addEventListener("mouseover", () => {
+    targetDiv1.style.animation = 'diIn 0.5s ease-in-out forwards';
+    setTimeout(() => {
+      targetDiv1.style.animation = 'diOut 0.5s ease-in-out forwards';
+    }, 1500);
+  });
+  hoverDiv1.addEventListener("mouseout", () => {
+    targetDiv1.style.opacity = 0
+    setTimeout(() => {
+      targetDiv1.innerHTML = "Hi, I'm Prashant <span class='wave'>👋</span>";
+      targetDiv1.style.scale = 1
+      targetDiv1.style.opacity = 1
+    }, 200);
+  });
+}
