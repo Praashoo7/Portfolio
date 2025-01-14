@@ -641,14 +641,32 @@ setupSlideshow('FFE8', lightModeImages8, darkModeImages8);
 /* FAVORITES  */
 /* ---------- DIWALI ---------- */
 
-const FESTIVAL_DATE_DIWALI = '2024-1-13';
+let diwaliDate;
+const whatAPI = ['2025-10-20', '2026-11-8', '2027-10-29', '2028-10-17', '2029-11-5', '2030-10-26']
+for (const date of whatAPI) {
+  const D1 = new Date(date);
+  D1.setHours(0, 0, 0, 0);
+  const startD1 = new Date(D1);
+  startD1.setDate(startD1.getDate() - 5);
+  const endD1 = new Date(D1);
+  endD1.setDate(endD1.getDate() + 5);
+  const todayD1 = new Date();
+  todayD1.setHours(0, 0, 0, 0);
+
+  if (todayD1 >= startD1 && todayD1 <= endD1) {
+    diwaliDate = date;
+    break;
+  }
+}
+
+const FESTIVAL_DATE_DIWALI = diwaliDate;
 
 const festivalDateDiwali = new Date(FESTIVAL_DATE_DIWALI);
 festivalDateDiwali.setHours(0, 0, 0, 0);
 const startDateDiwali = new Date(festivalDateDiwali);
 startDateDiwali.setDate(startDateDiwali.getDate() - 5);
 const endDateDiwali = new Date(festivalDateDiwali);
-endDateDiwali.setDate(endDateDiwali.getDate() + 6);
+endDateDiwali.setDate(endDateDiwali.getDate() + 5);
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 
