@@ -633,6 +633,58 @@ setupSlideshow('FFE8', lightModeImages8, darkModeImages8);
 
 
 
+/* ---------- DESIGN-CLUTTER-TEXT-HOVER ---------- */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const isNotTouchDevice = !('ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
+  const isWideEnough = window.innerWidth > 400;
+
+  if (isNotTouchDevice && isWideEnough) {
+      const card = document.querySelector(".designClutterCard");
+      const clutter = document.querySelector(".designClutter");
+      const clutterItems = clutter.querySelectorAll("div");
+
+      const transitionDuration = 1;
+      const delayIncrement = 0.1;
+      const totalDelay = (clutterItems.length - 1) * delayIncrement + transitionDuration;
+      let mouseInside = false;
+
+      card.addEventListener("mouseenter", () => {
+          mouseInside = true;
+
+          clutterItems.forEach((item, index) => {
+              item.style.transition = `transform ${transitionDuration}s ease ${index * delayIncrement}s`;
+              item.style.transform = "rotateZ(15deg)";
+          });
+
+          setTimeout(() => {
+              if (mouseInside) {
+                  clutter.style.transition = "margin 0.4s ease";
+                  clutter.style.margin = "0 0.5em 0 0.25em";
+              }
+          }, totalDelay * 500);
+      });
+
+      card.addEventListener("mouseleave", () => {
+          mouseInside = false;
+
+          clutterItems.forEach((item, index) => {
+              item.style.transition = `transform ${transitionDuration}s ease ${index * delayIncrement}s`;
+              item.style.transform = "rotateZ(0deg)";
+          });
+
+          setTimeout(() => {
+              if (!mouseInside) {
+                  clutter.style.transition = "margin 0.4s ease";
+                  clutter.style.margin = "0 0.25em 0 0.25em";
+              }
+          }, totalDelay * 500);
+      });
+  }
+});
+
+
+
 
 
 
