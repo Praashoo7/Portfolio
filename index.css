@@ -114,24 +114,24 @@
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 0;
     background: transparent; /* make scrollbar transparent */
 }
-::-webkit-scrollbar-thumb{
+/* ::-webkit-scrollbar-thumb{
   background-color: black;
   border-radius: 3px;
-}
+} */
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-} */
+}
 
 /* Hide scrollbar for IE, Edge and Firefox */
-/* body {
+body {
   -ms-overflow-style: none;
   scrollbar-width: none;
-} */
+}
 
 body {
   line-height: 1.5;
