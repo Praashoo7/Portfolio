@@ -685,51 +685,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-/* IMAGE-HOVER */
-/* IMAGE EFFECTS FROM - [https://lab.hakim.se/textify/] & [https://app.dithermark.com/] */
-
-const imgElement = document.getElementById("animatedImage");
-const defaultImage = "imgs/me.webp";
-const images = Array.from({ length: 18 }, (_, i) => `imgs/variations/${i + 1}.webp`);
-
-function preloadImages() {
-  new Image().src = defaultImage;
-
-  images.forEach(src => {
-      new Image().src = src;
-  });
-}
-
-preloadImages();
-
-let index = 0;
-let interval;
-let animationComplete = false;
-
-imgElement.addEventListener("mouseenter", () => {
-    if (animationComplete) return;
-    
-    interval = setInterval(() => {
-        if (index >= images.length) {
-            animationComplete = true;
-            imgElement.src = defaultImage;
-            clearInterval(interval);
-        } else {
-            imgElement.src = images[index];
-            index++;
-        }
-    }, 100);
-});
-
-imgElement.addEventListener("mouseleave", () => {
-    clearInterval(interval);
-    imgElement.src = defaultImage;
-    index = 0;
-    animationComplete = false;
-});
-
-
-
 
 
 
