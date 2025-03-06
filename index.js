@@ -684,7 +684,71 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/* IMAGE-HOVER */
+/* IMAGE EFFECTS FROM - [https://lab.hakim.se/textify/] */
 
+const imgElement = document.getElementById("animatedImage");
+const defaultImage = "imgs/me.webp";
+const images = Array.from({ length: 11 }, (_, i) => `imgs/variations/${i + 1}.webp`);
+
+let index = 0;
+let interval;
+let animationComplete = false;
+let validImages = [];
+
+const preloadImages = () => {
+  const loadPromises = images.map((src, idx) => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve({ src, valid: true, index: idx });
+      img.onerror = () => resolve({ src, valid: false, index: idx });
+      img.src = src;
+    });
+  });
+
+  loadPromises.push(new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve({ src: defaultImage, valid: true, index: -1 });
+    img.onerror = () => resolve({ src: defaultImage, valid: false, index: -1 });
+    img.src = defaultImage;
+  }));
+
+  Promise.all(loadPromises).then(results => {
+    validImages = results
+      .filter(img => img.valid && img.index >= 0)
+      .sort((a, b) => a.index - b.index)
+      .map(img => img.src);
+
+    const defaultLoaded = results.find(img => img.index === -1 && img.valid);
+    if (!defaultLoaded) {
+      console.error("Default image failed to load");
+    }
+  });
+};
+
+preloadImages();
+
+imgElement.addEventListener("mouseenter", () => {
+  if (animationComplete || validImages.length === 0) return;
+  
+  interval = setInterval(() => {
+    imgElement.src = validImages[index];
+    index++;
+    
+    if (index >= validImages.length) {
+      animationComplete = true;
+      imgElement.src = defaultImage;
+      clearInterval(interval);
+    }
+  }, 70);
+});
+
+imgElement.addEventListener("mouseleave", () => {
+  clearInterval(interval);
+  imgElement.src = defaultImage;
+  index = 0;
+  animationComplete = false;
+});
 
 
 

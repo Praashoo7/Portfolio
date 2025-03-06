@@ -2041,6 +2041,70 @@ color: red;
 
 /* DESIGN-CLUTTER-TEXT */
 
+.designClutterCard{
+  overflow: hidden;
+}
+.designClutterCard:hover .banner, .designClutterCard:hover .pencil{
+  opacity: 0;
+}
+
+.banner {
+  position: absolute;
+  color: black;
+  width: 40em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-10deg);
+  background-color: #F1FCC0;
+  background-image: url(imgs/cream-paper.png);
+  right: -5%;
+  top: 50%;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  overflow: hidden;
+  transition: 0.1s all ease-in-out;
+}
+.marqueeContainer {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.marquee {
+  display: inline-block;
+  animation: marquee 60s linear infinite;
+}
+@keyframes marquee {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+.pencil{
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  width: 12em;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+  transition: 0.1s all ease-in-out;
+}
+.pencil img{
+  width: 100%;
+}
+
 .designClutterText{
   display: flex;
   align-items: center;
@@ -2054,17 +2118,6 @@ color: red;
 }
 .designClutter div{
   transform-origin: bottom center;
-}
-
-@media screen and (max-width: 400px) {
-  .designClutterText{
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-  }
-  .designClutter{
-    margin: 0 0.25em 0 0;
-  }
 }
 
 @keyframes dropText {
@@ -2081,5 +2134,84 @@ color: red;
   }
   100%{
     transform: rotateZ(0deg);
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .banner{
+    top: 35%;
+    right: -35%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .banner{
+    top: 20%;
+  }
+}
+@media screen and (max-width: 1127px) {
+  .banner{
+    width: 20em;
+    top: 50%;
+    right: -5%;
+    transform: rotate(-20deg);
+  }
+}
+@media screen and (max-width: 890px) {
+  .banner{
+    top: 80%;
+    right: -15%;
+    transform: rotate(-40deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .pencil{
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.35));
+  }
+}
+@media screen and (max-width: 750px) {
+  .banner{
+    top: 50%;
+    right: -5%;
+    transform: rotate(-20deg);
+  }
+  .pencil{
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.5));
+  }
+}
+@media screen and (max-width: 545px) {
+  .designClutterText{
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .designClutter{
+    margin: 0 0.25em 0 0;
+  }
+  .banner{
+    width: 25em;
+    top: 65%;
+    right: -15%;
+    transform: rotate(-20deg);
+  }
+}
+@media screen and (max-width: 425px) {
+  .pencil{
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.35));
+  }
+}
+@media screen and (max-width: 375px) {
+  .banner{
+    width: 20em;
+    top: 70%;
+    right: -25%;
+    transform: rotate(-45deg);
+  }
+}
+@media screen and (max-width: 300px) {
+  .banner{
+    width: 20em;
+    top: 70%;
+    right: -40%;
+    transform: rotate(-55deg);
   }
 }
