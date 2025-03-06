@@ -496,12 +496,12 @@ document.addEventListener("DOMContentLoaded", function () {
 /*<!---------------------------------------------------------------------- CACHED ---------------------------------------------------------------------->*/
 
 
-const preloadedImage = new Image();
-preloadedImage.src = "imgs/me.webp";
-preloadedImage.onload = () => {
-    const meimg = document.getElementById("meimg");
-    meimg.src = preloadedImage.src;
-};
+// const preloadedImage = new Image();
+// preloadedImage.src = "imgs/me.webp";
+// preloadedImage.onload = () => {
+//     const meimg = document.getElementById("meimg");
+//     meimg.src = preloadedImage.src;
+// };
 
 
 
