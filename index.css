@@ -1386,7 +1386,7 @@ nav{
   --small-device-card-line: #2c2c2c;
   --small-device-card-border: #353535;
   --image-after1: #DFC274;
-  --image-after2: #f5f5f5;
+  --image-after2: #191919;
   --image-after3: #F8EBC9;
   --image-after4: #0c0c0c;
 }
@@ -1997,6 +1997,7 @@ color: red;
 }
 #image2::after{
   background-color: var(--image-after2);
+  color: var(--icon-color);
 }
 #image3::after{
   background-color: var(--image-after3);
