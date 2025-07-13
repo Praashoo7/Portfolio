@@ -548,8 +548,11 @@ nav{
   cursor: pointer;
   color: red;
 }
-.g2:nth-last-child(4):hover{
+.g2:nth-last-child(5):hover{
   color: #8c9eff;
+}
+.g2:nth-last-child(4):hover{
+  color: #00aa45;
 }
 .g2:nth-last-child(3):hover{
   color: #03A9F4;
@@ -560,6 +563,42 @@ nav{
 .g2:last-child:hover{
   color: #0A66C2;
 }
+.peerlistPath1{
+  transition: all 0.2s ease-in-out;
+}
+.peerlistPath2{
+  fill: var(--peerlist2);
+  transition: all 0.2s ease-in-out;
+}
+.peerlistPath3{
+  fill: transparent;
+  transition: all 0.2s ease-in-out;
+}
+.peerlistPath4{
+  fill: var(--peerlist1);
+  transition: all 0.2s ease-in-out;
+}
+.peerlistPath5{
+  fill: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.g2:nth-last-child(4):hover .peerlistPath1{
+  fill: #00AA45;
+}
+.g2:nth-last-child(4):hover .peerlistPath2{
+  fill: #24292E;
+}
+.g2:nth-last-child(4):hover .peerlistPath3{
+  fill: #24292E;
+}
+.g2:nth-last-child(4):hover .peerlistPath4{
+  fill: white;
+}
+.g2:nth-last-child(4):hover .peerlistPath5{
+  fill: #24292E;
+}
+
 .g2:hover::after{
   fill: red;
   opacity: 1;
@@ -1339,6 +1378,8 @@ nav{
   --image-after2: #f5f5f5;
   --image-after3: #F8EBC9;
   --image-after4: #fcfcfc;
+  --peerlist1: #87CEFA;
+  --peerlist2: #87CEFA50; 
 }
 /* dark mode css variables */
 [data-theme="dark"] {
@@ -1389,6 +1430,8 @@ nav{
   --image-after2: #191919;
   --image-after3: #F8EBC9;
   --image-after4: #0c0c0c;
+  --peerlist1: #171717;
+  --peerlist2: #17171750; 
 }
 
 /* css to style it like a toggle switch*/
