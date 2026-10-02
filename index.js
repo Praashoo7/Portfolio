@@ -85,6 +85,7 @@ function sendmail(){
         b.innerHTML = "Sorry "+n+", An error occurred. Please try again later!";
         b.style.textTransform = "none";
         b.style.opacity = "1";
+        b.disabled = false;
 
         setTimeout(function() {
           b.innerHTML = originalText;
@@ -96,6 +97,7 @@ function sendmail(){
         b.innerHTML = "Hi "+n+", Please check your Internet Connection!";
         b.style.textTransform = "none";
         b.style.opacity = "1";
+        b.disabled = false;
 
         setTimeout(function() {
           b.innerHTML = originalText;
