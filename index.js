@@ -621,6 +621,10 @@ const lightModeImages7 = ["https://praashoo7.github.io/I-Liked-a-Design/imgs/Rea
 const darkModeImages7 = ["https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-Green.png", "https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-Red.png", "https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-White.png", "https://praashoo7.github.io/I-Liked-a-Design/imgs/ReadMe-Images/ReadMe-Purple.png"];
 const lightModeImages8 = ["https://praashoo7.github.io/How-Many-Crimes-Have-You-Committed/imgs/ReadMe-Images/ReadMe-Image.png"];
 const darkModeImages8 = ["https://praashoo7.github.io/How-Many-Crimes-Have-You-Committed/imgs/ReadMe-Images/ReadMe-Image.png"];
+const lightModeImages9 = ["https://praashoo7.github.io/Neumorphic/imgs/Readme_Image_1.png", "https://praashoo7.github.io/Neumorphic/imgs/Readme_Image_3.png"];
+const darkModeImages9 = ["https://praashoo7.github.io/Neumorphic/imgs/Readme_Image_2.png", "https://praashoo7.github.io/Neumorphic/imgs/Readme_Image_4.png"];
+const lightModeImages10 = ["https://praashoo7.github.io/Tic-Tac-Take/imgs/ReadMe-Images/ReadMe-Image.png"];
+const darkModeImages10 = ["https://praashoo7.github.io/Tic-Tac-Take/imgs/ReadMe-Images/ReadMe-Image.png"];
 
 setupSlideshow('FFE1', lightModeImages1, darkModeImages1);
 setupSlideshow('FFE2', lightModeImages2, darkModeImages2);
@@ -630,6 +634,8 @@ setupSlideshow('FFE5', lightModeImages5, darkModeImages5);
 setupSlideshow('FFE6', lightModeImages6, darkModeImages6);
 setupSlideshow('FFE7', lightModeImages7, darkModeImages7);
 setupSlideshow('FFE8', lightModeImages8, darkModeImages8);
+setupSlideshow('FFE9', lightModeImages9, darkModeImages9);
+setupSlideshow('FFE10', lightModeImages10, darkModeImages10);
 
 
 
